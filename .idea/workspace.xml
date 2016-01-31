@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="12cb9b8e-1abc-42d0-b393-9ffbd63333da" name="Default" comment="Fix">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bbva/ticker/client/BBVAPriceTicker.java" afterPath="$PROJECT_DIR$/src/com/bbva/ticker/client/BBVAPriceTicker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bbva/ticker/client/PricingServiceProxy.java" afterPath="$PROJECT_DIR$/src/com/bbva/ticker/client/PricingServiceProxy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bbva/ticker/client/RequestPublisher.java" afterPath="$PROJECT_DIR$/src/com/bbva/ticker/client/RequestPublisher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bbva/ticker/client/Session.java" afterPath="$PROJECT_DIR$/src/com/bbva/ticker/client/Session.java" />
     </list>
     <ignored path="JOBS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,18 +37,11 @@
         <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/BBVAPriceTicker.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="397" column="80" selection-start-line="397" selection-start-column="80" selection-end-line="397" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-              <folding />
+              <caret line="441" column="51" selection-start-line="441" selection-start-column="51" selection-end-line="441" selection-end-column="51" />
+              <folding>
+                <element signature="e#5044#7657#0" expanded="true" />
+                <element signature="e#7656#7657#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,11 +76,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RequestPublisher.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RequestPublisher.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/RequestPublisher.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8382643">
+              <caret line="27" column="95" selection-start-line="27" selection-start-column="95" selection-end-line="27" selection-end-column="95" />
+              <folding>
+                <element signature="e#736#1125#0" expanded="true" />
+                <element signature="e#1124#1125#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PricingServiceProxy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/PricingServiceProxy.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="23" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="23" />
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -93,27 +103,29 @@
         <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/Session.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="20" />
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PricingServiceProxy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/PricingServiceProxy.java">
+      <file leaf-file-name="SubscribePriceDataRequestHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/SubscribePriceDataRequestHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-              <folding />
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <element signature="e#302#303#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientSocketFactory.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ClientSocketFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/ClientSocketFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4737705">
-              <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -123,11 +135,9 @@
         <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/PricingServiceClient.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8011#8012#0" expanded="true" />
-                <element signature="e#8052#8053#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -190,20 +200,20 @@
         <option value="$PROJECT_DIR$/src/com/bbva/ticker/service/ServerSocketFactory.java" />
         <option value="$PROJECT_DIR$/src/com/bbva/ticker/service/ClientSocketPublisher.java" />
         <option value="$PROJECT_DIR$/src/com/bbva/ticker/client/SimplePricingServiceClient.java" />
-        <option value="$PROJECT_DIR$/src/com/bbva/ticker/client/Session.java" />
         <option value="$PROJECT_DIR$/src/com/bbva/ticker/client/SocketAdaptor.java" />
         <option value="$PROJECT_DIR$/src/com/bbva/ticker/client/SimpleSocketAdaptor.java" />
         <option value="$PROJECT_DIR$/src/com/bbva/ticker/client/ClientException.java" />
         <option value="$PROJECT_DIR$/src/com/bbva/ticker/service/ComplexPricingServer.java" />
-        <option value="$PROJECT_DIR$/src/com/bbva/ticker/client/RequestPublisher.java" />
         <option value="$PROJECT_DIR$/src/com/bbva/ticker/service/PricingServer.java" />
         <option value="$PROJECT_DIR$/src/com/bbva/ticker/DataSource/PriceSourceDataAdapterImpl.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/com/bbva/ticker/client/Client.java" />
-        <option value="$PROJECT_DIR$/src/com/bbva/ticker/client/PricingServiceProxy.java" />
         <option value="$PROJECT_DIR$/src/com/bbva/ticker/client/PricingServiceClient.java" />
-        <option value="$PROJECT_DIR$/src/com/bbva/ticker/client/BBVAPriceTicker.java" />
         <option value="$PROJECT_DIR$/src/com/bbva/ticker/client/ClientSocketFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/bbva/ticker/client/BBVAPriceTicker.java" />
+        <option value="$PROJECT_DIR$/src/com/bbva/ticker/client/PricingServiceProxy.java" />
+        <option value="$PROJECT_DIR$/src/com/bbva/ticker/client/Session.java" />
+        <option value="$PROJECT_DIR$/src/com/bbva/ticker/client/RequestPublisher.java" />
       </list>
     </option>
   </component>
@@ -397,21 +407,21 @@
     <property name="ToolWindowRun.ShowToolbar" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\JOBS\BBVAPriceTicker\src\com\bbva\ticker\client" />
-      <recent name="C:\JOBS\BBVAPriceTicker" />
-      <recent name="C:\JOBS\BBVAPriceTicker\tools" />
-      <recent name="C:\JOBS\BBVAPriceTicker\src" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.bbva.ticker.client" />
+      <recent name="com.bbva.ticker.service" />
+      <recent name="com.bbva.ticker.model" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.bbva.ticker.DataSource" />
       <recent name="com.bbva.ticker.client" />
       <recent name="com.bbva.ticker.service" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.bbva.ticker.client" />
-      <recent name="com.bbva.ticker.service" />
-      <recent name="com.bbva.ticker.model" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\JOBS\BBVAPriceTicker\src\com\bbva\ticker\client" />
+      <recent name="C:\JOBS\BBVAPriceTicker" />
+      <recent name="C:\JOBS\BBVAPriceTicker\tools" />
+      <recent name="C:\JOBS\BBVAPriceTicker\src" />
     </key>
   </component>
   <component name="RunManager" selected="JAR Application.Client.jar">
@@ -885,8 +895,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JAR Application.Client.jar" />
-        <item index="1" class="java.lang.String" itemvalue="JAR Application.Server.jar" />
-        <item index="2" class="java.lang.String" itemvalue="Application.PricingServer" />
+        <item index="1" class="java.lang.String" itemvalue="Application.PricingServer" />
+        <item index="2" class="java.lang.String" itemvalue="JAR Application.Server.jar" />
         <item index="3" class="java.lang.String" itemvalue="Application.BBVAPriceTicker" />
         <item index="4" class="java.lang.String" itemvalue="Application.RowSorterDemo" />
       </list>
@@ -918,7 +928,7 @@
       <workItem from="1454272539901" duration="103000" />
       <workItem from="1454272664366" duration="43000" />
       <workItem from="1454272824149" duration="3443000" />
-      <workItem from="1454276396753" duration="106000" />
+      <workItem from="1454276396753" duration="1476000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed File Name">
       <created>1454209158406</created>
@@ -956,11 +966,17 @@
       <option name="project" value="LOCAL" />
       <updated>1454276126566</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fix">
+      <created>1454276506896</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1454276506896</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194854000" />
+    <option name="totallyTimeSpent" value="196224000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -972,13 +988,13 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43446088" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43446088" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47357294" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.228125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3255814" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3255814" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1092,45 +1108,33 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/bbva/ticker/client/BBVAPriceTicker.java</url>
-          <line>442</line>
-          <properties />
-          <option name="timeStamp" value="457" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/bbva/ticker/client/BBVAPriceTicker.java</url>
           <line>162</line>
           <properties />
           <option name="timeStamp" value="460" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/bbva/ticker/client/RequestPublisher.java</url>
-          <line>26</line>
-          <properties />
-          <option name="timeStamp" value="461" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/bbva/ticker/client/Session.java</url>
-          <line>32</line>
+          <line>33</line>
           <properties />
           <option name="timeStamp" value="462" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/bbva/ticker/client/BBVAPriceTicker.java</url>
-          <line>393</line>
+          <line>442</line>
           <properties />
-          <option name="timeStamp" value="463" />
+          <option name="timeStamp" value="467" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/bbva/ticker/client/BBVAPriceTicker.java</url>
-          <line>92</line>
+          <url>file://$PROJECT_DIR$/src/com/bbva/ticker/client/PricingServiceProxy.java</url>
+          <line>62</line>
           <properties />
-          <option name="timeStamp" value="464" />
+          <option name="timeStamp" value="472" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="465" />
+      <option name="time" value="475" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1151,13 +1155,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_80/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33246073">
-          <caret line="234" column="12" selection-start-line="234" selection-start-column="12" selection-end-line="234" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_80/src.zip!/java/util/Map.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1419,6 +1416,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1446,54 +1444,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/BBVAPriceTicker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="397" column="80" selection-start-line="397" selection-start-column="80" selection-end-line="397" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/PricingServiceClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8011#8012#0" expanded="true" />
-            <element signature="e#8052#8053#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/RequestPublisher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/Session.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/PricingServiceProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        <state vertical-scroll-proportion="-1.9615384">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1524,9 +1478,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/ClientSocketFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4737705">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/PricingServiceClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/SubscribePriceDataRequestHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#302#303#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/PricingServiceProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/BBVAPriceTicker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="441" column="51" selection-start-line="441" selection-start-column="51" selection-end-line="441" selection-end-column="51" />
+          <folding>
+            <element signature="e#5044#7657#0" expanded="true" />
+            <element signature="e#7656#7657#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/RequestPublisher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8382643">
+          <caret line="27" column="95" selection-start-line="27" selection-start-column="95" selection-end-line="27" selection-end-column="95" />
+          <folding>
+            <element signature="e#736#1125#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

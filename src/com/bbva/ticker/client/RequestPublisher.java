@@ -6,7 +6,7 @@ import com.bbva.ticker.model.Request;
 import java.util.concurrent.ExecutorService;
 
 public class RequestPublisher implements AutoCloseable {
-    private  SocketAdaptor m_socketAdaptor;
+    private SocketAdaptor m_socketAdaptor;
     private final ExecutorService m_executorService;
 
     public RequestPublisher(SocketAdaptor socketAdaptor,
@@ -20,11 +20,15 @@ public class RequestPublisher implements AutoCloseable {
         m_socketAdaptor.close();
     }
 
-    public void publish(final Request request) {
+    public void publish(final Request request,final Client client) throws ClientException {
         m_executorService.execute(new Runnable() {
             @Override
             public void run() {
-                m_socketAdaptor.write(request);
+                if (m_socketAdaptor == null) {
+                    client.setException(new Exception("Unable to perform " + request.toString() + " No Socket Adaptor available, Kindly start pricing server first!!"));
+                    return;
+                } m_socketAdaptor.write(request);
+
             }
         });
     }

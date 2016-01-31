@@ -94,7 +94,7 @@ public class BBVAPriceTicker implements Client{
         JTextArea m_status = null;
         m_status = (JTextArea)components.get(name);
         if (m_status==null) {
-            m_status = new JTextArea("Status");
+            m_status = new JTextArea();
             m_status.setName(name);
             Font font = new Font("Arial", Font.ITALIC, 14);
             m_status.setFont(font);

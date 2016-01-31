@@ -21,21 +21,36 @@ public class PricingServiceProxy {
     public void subscribePriceData(String identifier, DataRequest dataRequest, Callback<PriceData, String> callback) {
         ResponseHandler responseHandler = new SubscribePriceDataResponseHandler(
                 callback, Request.MessageType.subscribePriceData);
-        m_session.execute(identifier, new SubscribePriceDataRequestHandler(dataRequest), responseHandler,
-                2000);
+
+        try {
+            m_session.execute(identifier, new SubscribePriceDataRequestHandler(dataRequest), responseHandler,
+                    2000,m_client);
+        }catch (Exception e){
+            m_client.setException(e);
+        }
     }
 
     public void unsubscribePriceData(String identifier, DataRequest dataRequest, Callback<String, String> callback) {
         ResponseHandler responseHandler = new UnsubscribePriceDataResponseHandler(
                 callback, Request.MessageType.unsubscribePriceData);
-        m_session.execute(identifier, new UnsubscribePriceDataRequestHandler(dataRequest), responseHandler,
-                2000);
+
+        try {
+            m_session.execute(identifier, new UnsubscribePriceDataRequestHandler(dataRequest), responseHandler,
+                    2000,m_client);
+        }catch (Exception e){
+            m_client.setException(e);
+        }
+
     }
     public void getPriceDataHistory(String identifier, DataHistoryRequest dataHistoryRequest, Callback<List<PriceData>, String> callback) {
         ResponseHandler responseHandler = new PriceDataHistoryResponseHandler(
                 callback, Request.MessageType.priceDataHistory);
-        m_session.execute(identifier, new PriceDataHistoryRequestHandler(dataHistoryRequest), responseHandler,
-                2000);
+        try {
+            m_session.execute(identifier, new PriceDataHistoryRequestHandler(dataHistoryRequest), responseHandler,
+                    2000,m_client);
+        }catch (Exception e){
+            m_client.setException(e);
+        }
     }
     Map<String, ResponseHandler> m_responseHandlers = new HashMap<>();
 
@@ -47,8 +62,10 @@ public class PricingServiceProxy {
         try {
             socketAdaptor = new SimpleSocketAdaptor(
                     clientSocketFactory.create());
+
         } catch (Exception e) {
             m_client.setException(e);
+
         }
         ResponseListener responseListener = new ResponseListener(
                 socketAdaptor, Executors.newFixedThreadPool(20), m_responseHandlers);
