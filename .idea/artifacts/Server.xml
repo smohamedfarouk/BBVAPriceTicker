@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Server">
+    <output-path>$PROJECT_DIR$/out/artifacts/Server</output-path>
+    <properties id="ant-preprocessing">
+      <options enabled="true" />
+    </properties>
+    <root id="archive" name="Server.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/jars/server/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="JOBS" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar" path-in-jar="/" />
+      <element id="dir-copy" path="$PROJECT_DIR$/src/com/bbva/ticker/model" />
+      <element id="dir-copy" path="$PROJECT_DIR$/src/com/bbva/ticker/DataSource" />
+      <element id="dir-copy" path="$PROJECT_DIR$/src/com/bbva/ticker/service" />
+    </root>
+  </artifact>
+</component>
