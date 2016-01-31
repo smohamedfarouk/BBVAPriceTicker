@@ -1,0 +1,67 @@
+option java_package = "com.bbva.ticker.model";
+
+option java_outer_classname = "TickDataProtos";
+
+option java_multiple_files = true;
+
+option java_generate_equals_and_hash = true;
+
+message Instrument {
+    required int32 instrumentId = 1;
+    required string name = 2;
+}
+
+enum PricingType {
+    TICK = 0;
+    MINUTE = 1;
+    DAILY = 2;
+}
+enum PriceDataSourceType {
+    SOURCE1 = 0;
+    SOURCE2 = 1;
+    SOURCE3 = 2;
+}
+
+message DataHistoryRequest {
+    required int32 id = 1;
+    required Instrument instrument = 2;
+    required PriceDataSourceType priceDataSourceType = 3;
+    required PricingType pricingType = 4;
+    required int32 count = 5;
+}
+
+message DataRequest {
+    required int32 id = 1;
+    required Instrument instrument = 2;
+    required PriceDataSourceType priceDataSourceType = 3;
+    required PricingType pricingType = 4;
+}
+
+message Request {
+    enum MessageType {
+        subscribePriceData = 0;
+        unsubscribePriceData = 1;
+        priceDataHistory = 2;
+    }
+    required string identifier = 1;
+    required MessageType messageType = 2;
+    optional DataRequest dataRequest = 3;
+    optional DataHistoryRequest dataHistoryRequest = 4;
+}
+
+message PriceData {
+    required int32 id = 1;
+    required Instrument instrument = 2;
+    required string rateBid = 3;
+    required string rateOffer = 4;
+    required int64 dateTime = 5;
+    required PriceDataSourceType priceDataSourceType = 6;
+}
+
+message Response {
+    required string identifier = 1;
+    optional PriceData priceData = 2;
+    optional string exception = 3;
+    optional string message = 4;
+    repeated PriceData priceDataHistory = 5;
+}
