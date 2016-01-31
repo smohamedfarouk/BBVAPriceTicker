@@ -5,10 +5,8 @@ package com.bbva.ticker.client;
  */
 
 import com.bbva.ticker.model.*;
-import javafx.scene.control.RadioButton;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 import java.awt.*;
@@ -224,7 +222,7 @@ public class BBVAPriceTicker {
 
                             @Override
                             public void failure(String failure) {
-                                ((JTextField) components.get("status")).setText(failure);
+                                ((JTextArea) components.get("status")).setText(failure);
                                 //  System.out.println("Failure subscribePriceData"
                                 //    + failure.toString());
                             }

@@ -9,8 +9,6 @@ import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by moham on 25/01/2016.
@@ -36,8 +34,11 @@ public class PriceSourceDataAdapterImpl implements PriceSourceAdapter {
 
     public List<PriceData> getPriceData(PriceDataSourceType source, Instrument instrument, int count) {
         SourcePriceDataStore sourcePriceDataStore = sourcePriceDataStores.get(source);
-        PriceDataMap<PriceData> prices = sourcePriceDataStore.getPriceDataList(instrument);
-        return prices.getPriceDataList();
+        if (sourcePriceDataStore != null) {
+            PriceDataMap<PriceData> prices = sourcePriceDataStore.getPriceDataList(instrument);
+            return prices.getPriceDataList();
+        }
+        return new ArrayList<>();
     }
 
     @Override
@@ -71,7 +72,6 @@ public class PriceSourceDataAdapterImpl implements PriceSourceAdapter {
     public PriceData getPriceData(PriceDataSourceType source, Instrument instrument, PricingType type) {
         String tickLine = new String(source + delimeter + randomIntValue() + delimeter + instrument.getInstrumentId() + delimeter + instrument.getName() +
                 delimeter + randomDoubleValue() + delimeter + randomDoubleValue() + delimeter + System.currentTimeMillis());
-
         return convert(tickLine);
     }
 
