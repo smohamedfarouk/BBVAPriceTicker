@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12cb9b8e-1abc-42d0-b393-9ffbd63333da" name="Default" comment="Fix for Bid before subscription">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/bbva/ticker/client/Client.java" />
+    <list default="true" id="12cb9b8e-1abc-42d0-b393-9ffbd63333da" name="Default" comment="Fix for informing server not started error message">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bbva/ticker/client/BBVAPriceTicker.java" afterPath="$PROJECT_DIR$/src/com/bbva/ticker/client/BBVAPriceTicker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bbva/ticker/client/ClientSocketFactory.java" afterPath="$PROJECT_DIR$/src/com/bbva/ticker/client/ClientSocketFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bbva/ticker/client/PricingServiceClient.java" afterPath="$PROJECT_DIR$/src/com/bbva/ticker/client/PricingServiceClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bbva/ticker/client/PricingServiceProxy.java" afterPath="$PROJECT_DIR$/src/com/bbva/ticker/client/PricingServiceProxy.java" />
     </list>
     <ignored path="JOBS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -106,8 +100,8 @@
       <file leaf-file-name="ClientSocketFactory.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/ClientSocketFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6035503">
-              <caret line="19" column="84" selection-start-line="19" selection-start-column="84" selection-end-line="19" selection-end-column="84" />
+            <state vertical-scroll-proportion="0.63708085">
+              <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -973,7 +967,7 @@
       <workItem from="1454208325309" duration="4836000" />
       <workItem from="1454272539901" duration="103000" />
       <workItem from="1454272664366" duration="43000" />
-      <workItem from="1454272824149" duration="3224000" />
+      <workItem from="1454272824149" duration="3292000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed File Name">
       <created>1454209158406</created>
@@ -999,11 +993,17 @@
       <option name="project" value="LOCAL" />
       <updated>1454273736954</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fix for informing server not started error message">
+      <created>1454276070611</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1454276070611</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194529000" />
+    <option name="totallyTimeSpent" value="194597000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1015,7 +1015,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43446088" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43446088" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47357294" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1083,7 +1083,8 @@
     <MESSAGE value="Renamed File Name" />
     <MESSAGE value="Mainfest files" />
     <MESSAGE value="Fix for Bid before subscription" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix for Bid before subscription" />
+    <MESSAGE value="Fix for informing server not started error message" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix for informing server not started error message" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1579,8 +1580,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/ClientSocketFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6035503">
-          <caret line="19" column="84" selection-start-line="19" selection-start-column="84" selection-end-line="19" selection-end-column="84" />
+        <state vertical-scroll-proportion="0.63708085">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
           <folding />
         </state>
       </provider>
