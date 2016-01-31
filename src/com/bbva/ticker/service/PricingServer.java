@@ -26,7 +26,7 @@ public class PricingServer {
     public static void main(String[] args) {
         final PricingServer server = new PricingServer();
 
-        System.out.println("Starting lesson server Port  " + portNo);
+        System.out.println("Starting Pricing server @ Port  " + portNo);
         new Thread(new Runnable() {
             public void run() {
                 try {
@@ -39,7 +39,7 @@ public class PricingServer {
         }).start();
         new ShutDownHookImpl() {
             public void shutDownProcess() {
-                System.out.println("Shutting down lesson server");
+                System.out.println("Shutting down Pricing server");
                 try {
                     Thread.sleep(8000);
                 } catch (InterruptedException e) {
