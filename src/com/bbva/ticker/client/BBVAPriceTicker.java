@@ -14,12 +14,12 @@ import java.awt.event.*;
 import java.util.*;
 import java.util.List;
 
-public class BBVAPriceTicker {
+public class BBVAPriceTicker implements Client{
     private Map<String, Component> components = new HashMap<>();
     private Map<String, String> currencySubscriptions = new HashMap<>();
 
-    final PricingServiceClient client = new PricingServiceClient();
-
+    final PricingServiceClient client = new PricingServiceClient(this);
+    private Throwable m_throwable;
     private JButton setHistoryRequested(String currency, String source) {
         JButton m_history_required = new JButton();
         String name = "historyReq" + currency + "_" + source;
@@ -30,52 +30,78 @@ public class BBVAPriceTicker {
     }
 
     private JButton getSubscribeButton(String currency, String source) {
-        JButton m_subscribeButton = new JButton("Subscribe");
         String name = "subscribe_button_" + currency + "_" + source;
-        m_subscribeButton.setName(name);
-        components.put(name, m_subscribeButton);
-        m_subscribeButton.addActionListener(subscriberActionListener);
-        m_subscribeButton.setEnabled(true);
+        JButton m_subscribeButton = null;
+        m_subscribeButton = (JButton)components.get(name);
+        if (m_subscribeButton==null) {
+             m_subscribeButton = new JButton("Subscribe");
+            m_subscribeButton.setName(name);
+            m_subscribeButton.addActionListener(subscriberActionListener);
+            components.put(name, m_subscribeButton);
+            m_subscribeButton.setEnabled(true);
+
+        }
+        m_subscribeButton =(JButton)components.get(name);
         return m_subscribeButton;
     }
 
     private JButton getUnsubscribeButton(String currency, String source) {
-        JButton m_unsubscribeButton = new JButton("Unsubscribe");
         String name = "unsubscribe_button_" + currency + "_" + source;
-        m_unsubscribeButton.setName(name);
-        components.put(name, m_unsubscribeButton);
-        m_unsubscribeButton.addActionListener(unSubscriberActionListener);
-        m_unsubscribeButton.setEnabled(false);
+        JButton m_unsubscribeButton = null;
+        m_unsubscribeButton = (JButton)components.get(name);
+        if (m_unsubscribeButton==null) {
+            m_unsubscribeButton = new JButton("Unsubscribe");
+            m_unsubscribeButton.setName(name);
+            components.put(name, m_unsubscribeButton);
+            m_unsubscribeButton.addActionListener(unSubscriberActionListener);
+            m_unsubscribeButton.setEnabled(false);
+        }
         return m_unsubscribeButton;
     }
 
     private JLabel getBidLabel(String currency, String source) {
-        // if (m_bidLabel == null) {
-        JLabel m_bidLabel = new JLabel("Bid");
         String name = "bid_label_" + currency + "_" + source;
-        m_bidLabel.setName(name);
-        m_bidLabel.setPreferredSize(new Dimension(50, 50));
-        m_bidLabel.addMouseListener(labelMouseListener);
-        components.put(name, m_bidLabel);
+        JLabel m_bidLabel = null;
+        m_bidLabel = (JLabel)components.get(name);
+        if (m_bidLabel==null) {
+            m_bidLabel = new JLabel("Bid");
+            m_bidLabel.setName(name);
+            m_bidLabel.setPreferredSize(new Dimension(50, 50));
+            m_bidLabel.addMouseListener(labelMouseListener);
+            m_bidLabel.setEnabled(true);
+            components.put(name, m_bidLabel);
+        }
         return m_bidLabel;
     }
 
     private JLabel getOfferLabel(String currency, String source) {
-        // if (m_offerLabel == null) {
-        JLabel m_offerLabel = new JLabel("Offer");
         String name = "offer_label_" + currency + "_" + source;
-        m_offerLabel.setName(name);
-        m_offerLabel.setPreferredSize(new Dimension(50, 50));
-        m_offerLabel.addMouseListener(labelMouseListener);
-        components.put(name, m_offerLabel);
-        //  }
+        JLabel m_offerLabel = null;
+        m_offerLabel = (JLabel)components.get(name);
+        if (m_offerLabel==null) {
+            m_offerLabel = new JLabel("Bid");
+            m_offerLabel.setName(name);
+            m_offerLabel.setPreferredSize(new Dimension(50, 50));
+            m_offerLabel.addMouseListener(labelMouseListener);
+            m_offerLabel.setEnabled(true);
+            components.put(name, m_offerLabel);
+        }
         return m_offerLabel;
     }
 
     private JTextArea getStatusField() {
-        JTextArea m_status = new JTextArea();
-        m_status.setName("status");
-        components.put("status", m_status);
+        String name = "status";
+        JTextArea m_status = null;
+        m_status = (JTextArea)components.get(name);
+        if (m_status==null) {
+            m_status = new JTextArea("Status");
+            m_status.setName(name);
+            Font font = new Font("Arial", Font.ITALIC, 14);
+            m_status.setFont(font);
+            m_status.setForeground(Color.BLUE);
+            m_status.setEnabled(true);
+            components.put(name, m_status);
+        }
         return m_status;
     }
 
@@ -98,7 +124,7 @@ public class BBVAPriceTicker {
             final String instrument = instrument1[2];
             final String source = instrument1[3];
             final DataRequest.Builder dataRequestBuilder = client.createDataRequestForSubscription(1, instrument, PriceDataSourceType.valueOf(source));
-            ((JTextArea) components.get("status")).setText("Subscribing PriceData for  Instrument:" + instrument + " and Source:" + source);
+            ((JTextArea) components.get("status")).setText("Subscribing PriceData for Instrument:" + instrument + " and Source:" + source);
             SwingUtilities.invokeLater(new Runnable() {
                 @Override
                 public void run() {
@@ -360,22 +386,25 @@ public class BBVAPriceTicker {
     public static void addComponentsToPane(Container container) {
         container.setSize(new Dimension(1400, 1400));
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
-
-        JPanel segmentsPanel = new JPanel();
-        segmentsPanel.setLayout(new BoxLayout(segmentsPanel, BoxLayout.X_AXIS));
-        container.add(segmentsPanel);
-
         BBVAPriceTicker individualSource = new BBVAPriceTicker();
-        individualSource.getIndividualSourceBoxes(segmentsPanel, PriceDataSourceType.SOURCE1.toString(), individualSource);
-        individualSource.getIndividualSourceBoxes(segmentsPanel, PriceDataSourceType.SOURCE2.toString(), individualSource);
-        individualSource.getIndividualSourceBoxes(segmentsPanel, PriceDataSourceType.SOURCE3.toString(), individualSource);
         JPanel statusPanel = new JPanel();
         statusPanel.setBackground(Color.WHITE);
         // statusPanel.setLayout(layout1);
         statusPanel.setAlignmentY(Component.CENTER_ALIGNMENT);
         statusPanel.add(individualSource.getStatusField());
+
         container.add("statusBar", statusPanel);
+        JPanel segmentsPanel = new JPanel();
+        segmentsPanel.setLayout(new BoxLayout(segmentsPanel, BoxLayout.X_AXIS));
+        container.add(segmentsPanel);
+
+
+
         //container.add(statusPanel);
+        individualSource.getIndividualSourceBoxes(segmentsPanel, PriceDataSourceType.SOURCE1.toString(), individualSource);
+        individualSource.getIndividualSourceBoxes(segmentsPanel, PriceDataSourceType.SOURCE2.toString(), individualSource);
+        individualSource.getIndividualSourceBoxes(segmentsPanel, PriceDataSourceType.SOURCE3.toString(), individualSource);
+
 
 
     }
@@ -407,5 +436,11 @@ public class BBVAPriceTicker {
                 createAndShowGUI();
             }
         });
+    }
+
+    @Override
+    public void setException(Throwable throwable) {
+        m_throwable =throwable;
+        getStatusField().setText(m_throwable.getLocalizedMessage());
     }
 }

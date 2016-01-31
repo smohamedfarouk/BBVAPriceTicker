@@ -10,9 +10,12 @@ import java.util.concurrent.Executors;
 public class PricingServiceProxy {
 
     private Session m_session;
+    private Client m_client;
 
-    public PricingServiceProxy() {
+    public PricingServiceProxy(Client client) {
+        this.m_client = client;
         connect();
+
     }
 
     public void subscribePriceData(String identifier, DataRequest dataRequest, Callback<PriceData, String> callback) {
@@ -45,7 +48,7 @@ public class PricingServiceProxy {
             socketAdaptor = new SimpleSocketAdaptor(
                     clientSocketFactory.create());
         } catch (Exception e) {
-            e.printStackTrace();
+            m_client.setException(e);
         }
         ResponseListener responseListener = new ResponseListener(
                 socketAdaptor, Executors.newFixedThreadPool(20), m_responseHandlers);

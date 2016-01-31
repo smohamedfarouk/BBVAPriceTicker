@@ -8,16 +8,26 @@ import java.util.Random;
 /**
  * Created by moham on 25/01/2016.
  */
-public class PricingServiceClient {
+public class PricingServiceClient implements Client {
+    private Throwable throwable;
     PricingServiceProxy proxy;
+    private Client m_client;
 
-    public PricingServiceClient() throws ClientException {
-        proxy = new PricingServiceProxy();
+    public PricingServiceClient(Client client) throws ClientException {
+        this.m_client = client;
+        proxy = new PricingServiceProxy(m_client);
     }
 
 
     public static void main(String[] args) {
-        PricingServiceClient client = new PricingServiceClient();
+        Client endClient =new Client(){
+
+            @Override
+            public void setException(Throwable throwable) {
+                System.out.println("Exception" + throwable.getLocalizedMessage());
+            }
+        };
+        PricingServiceClient client = new PricingServiceClient(endClient);
         Callback subScribeCallback = new Callback<PriceData, String>() {
 
             @Override
@@ -34,7 +44,7 @@ public class PricingServiceClient {
 
 
         };
-         Callback unsubScribeCallback = new Callback<String, String>() {
+        Callback unsubScribeCallback = new Callback<String, String>() {
 
             @Override
             public void success(String success) {
@@ -136,7 +146,7 @@ public class PricingServiceClient {
     }
 
     public static String getRequestIdentifier() {
-        String identifier = new UUIDIdentifierFactory().newIdentifier()+1;
+        String identifier = new UUIDIdentifierFactory().newIdentifier() + 1;
         return identifier;
 
     }
@@ -145,5 +155,10 @@ public class PricingServiceClient {
         Random rand = new Random();
         int posRandInt = rand.nextInt(Integer.MAX_VALUE) + 1;
         return posRandInt;
+    }
+
+    @Override
+    public void setException(Throwable throwable) {
+       this.throwable = throwable;
     }
 }

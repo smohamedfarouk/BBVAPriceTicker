@@ -16,8 +16,8 @@ public class ClientSocketFactory {
 		try {
 			return new Socket(m_host, m_port);
 		} catch (IOException e) {
-			throw new ClientException("Failed to create a socket to host:"
-					+ m_host + " on port: " + m_port, e);
+			throw new ClientException("Server Unavailable: Failed to create a socket to host:"
+					+ m_host + " on port: " + m_port + " Kindly start pricing server", e);
 		}
 	}
 }
