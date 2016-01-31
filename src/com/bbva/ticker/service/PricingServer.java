@@ -2,7 +2,6 @@ package com.bbva.ticker.service;
 
 import com.bbva.ticker.DataSource.PriceSourceAdapter;
 import com.bbva.ticker.DataSource.PriceSourceDataAdapterImpl;
-import com.bbva.ticker.client.ClientException;
 import com.bbva.ticker.client.UUIDIdentifierFactory;
 import com.bbva.ticker.model.Request;
 import com.bbva.ticker.model.Response;
@@ -16,7 +15,7 @@ import java.util.concurrent.Executors;
 /**
  * Created by moham on 26/01/2016.
  */
-public class ComplexPricingServer {
+public class PricingServer {
     private ServerSocket m_socket;
     private final Map<Integer, PricingService> m_clients = new ConcurrentHashMap<>();
     private final Map<String, Request> m_requests = new ConcurrentHashMap<>();
@@ -25,7 +24,7 @@ public class ComplexPricingServer {
     final static int portNo = 9005;
 
     public static void main(String[] args) {
-        final ComplexPricingServer server = new ComplexPricingServer();
+        final PricingServer server = new PricingServer();
 
         System.out.println("Starting lesson server Port  " + portNo);
         new Thread(new Runnable() {
