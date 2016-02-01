@@ -1,8 +1,16 @@
 # BBVAPriceTicker
-Assignment for BBVA Bank
+BBVA Java UI Task
+Introduction:
+For this task, the candidate is expected to demonstrate good software design and implementation within the context of low-latency financial systems.  The solution provided is expected to be of reasonable quality for a prototype.  Wherever the problem is unclear, the candidate should make (and state) any assumptions he or she thinks appropriate within the application context.
+The task:
+Design and implement a Java Swing or JavaFX application that accomplishes the following:
+1.	For each of three independent price sources, the application should subscribe for continuous two-way prices for ten instruments.
+2.	As the two-way prices tick, the main user interface should display the latest two-way price for each price-source and instrument combination
+3.	Should a user double-click on any “latest” two-way price, then a dialog showing the last fifty “historic” two-way price ticks (for the price-source and instrument that the double-clicked “latest” two-way price belongs to) should be shown.  The dialog should also show timestamps of every price tick and allow flexible sorting by timestamp and price.
+
 Design
-1. Uses Client Server technology
-2. Use Google Protobuf as a protocol for fast and efficent data marshalling and unmarshalling.
+1. Used Client Server technology
+2. Used Google Protobuf as a protocol for fast and efficent data marshalling and unmarshalling.
 3. Compiler based model generation
 4. Will work on aysnchronous RPC with call back style client mechanisms
 5. Uses Low level socket programming and protocol
@@ -16,10 +24,14 @@ Design RoadMap:
 4. Client will have the facility to subscribe and unsubsribe multiple times for the same instrument
 
 Packaging:
- 1. Zip contains a SRC folder with all the code
- 2. Executable java jar file for client
- 3. Executable java jar file for server
+ 1. Executable java jar file for client
+ 2. Executable java jar file for server
+ 3. Source code available from github URL:
+  https://github.com/smohamedfarouk/BBVAPriceTicker
 
 How to start the server:
-java - jar Server.jar
-java - jar Client.jar
+1. First start the Pricing Server first
+    java - jar Server.jar
+
+2. Start the client
+    java - jar Client.jar

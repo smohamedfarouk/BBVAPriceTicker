@@ -50,7 +50,7 @@ public class PricingServer {
     }
 
     private void startServer() {
-     final   PriceSourceAdapter priceSourceAdapter = new PriceSourceDataAdapterImpl();
+     final   PriceSourceAdapter priceSourceAdapter = new PriceSourceDataAdapterImpl(50);
         Thread t1 = new Thread(new Runnable() {
 
             @Override

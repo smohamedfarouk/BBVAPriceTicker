@@ -16,17 +16,17 @@ import java.util.concurrent.ConcurrentHashMap;
 public class PriceSourceDataAdapterImpl implements PriceSourceAdapter {
 
     private final static String delimeter = ",";
-
+    private int m_maxRecordsToKeep;
     private Map<PriceDataSourceType, SourcePriceDataStore> sourcePriceDataStores = new ConcurrentHashMap<>();
 
-    public PriceSourceDataAdapterImpl() {
-
+    public PriceSourceDataAdapterImpl(int maxRecordsToKeep) {
+        this.m_maxRecordsToKeep =maxRecordsToKeep;
     }
 
-    public void addPriceData(PriceDataSourceType priceDataSourceType, Instrument instrument, PriceData priceData) {
+    public void addPriceData( PriceDataSourceType priceDataSourceType,Instrument instrument, PriceData priceData) {
         if (sourcePriceDataStores.get(priceDataSourceType) == null) {
             Map<Instrument, PriceDataMap<PriceData>> instrumentPriceDataListMap = new ConcurrentHashMap<>();
-            sourcePriceDataStores.put(priceDataSourceType, new SourcePriceDataStore(priceDataSourceType, instrumentPriceDataListMap));
+            sourcePriceDataStores.put(priceDataSourceType, new SourcePriceDataStore(priceDataSourceType, instrumentPriceDataListMap,m_maxRecordsToKeep));
         }
         SourcePriceDataStore sourcePriceDataStore = sourcePriceDataStores.get(priceDataSourceType);
         sourcePriceDataStore.addPriceDataList(instrument, priceData);

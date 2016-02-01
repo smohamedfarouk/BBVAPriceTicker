@@ -14,12 +14,13 @@ import java.awt.event.*;
 import java.util.*;
 import java.util.List;
 
-public class BBVAPriceTicker implements Client{
+public class BBVAPriceTicker implements Client {
     private Map<String, Component> components = new HashMap<>();
     private Map<String, String> currencySubscriptions = new HashMap<>();
 
     final PricingServiceClient client = new PricingServiceClient(this);
     private Throwable m_throwable;
+
     private JButton setHistoryRequested(String currency, String source) {
         JButton m_history_required = new JButton();
         String name = "historyReq" + currency + "_" + source;
@@ -32,24 +33,24 @@ public class BBVAPriceTicker implements Client{
     private JButton getSubscribeButton(String currency, String source) {
         String name = "subscribe_button_" + currency + "_" + source;
         JButton m_subscribeButton = null;
-        m_subscribeButton = (JButton)components.get(name);
-        if (m_subscribeButton==null) {
-             m_subscribeButton = new JButton("Subscribe");
+        m_subscribeButton = (JButton) components.get(name);
+        if (m_subscribeButton == null) {
+            m_subscribeButton = new JButton("Subscribe");
             m_subscribeButton.setName(name);
             m_subscribeButton.addActionListener(subscriberActionListener);
             components.put(name, m_subscribeButton);
             m_subscribeButton.setEnabled(true);
 
         }
-        m_subscribeButton =(JButton)components.get(name);
+        m_subscribeButton = (JButton) components.get(name);
         return m_subscribeButton;
     }
 
     private JButton getUnsubscribeButton(String currency, String source) {
         String name = "unsubscribe_button_" + currency + "_" + source;
         JButton m_unsubscribeButton = null;
-        m_unsubscribeButton = (JButton)components.get(name);
-        if (m_unsubscribeButton==null) {
+        m_unsubscribeButton = (JButton) components.get(name);
+        if (m_unsubscribeButton == null) {
             m_unsubscribeButton = new JButton("Unsubscribe");
             m_unsubscribeButton.setName(name);
             components.put(name, m_unsubscribeButton);
@@ -62,13 +63,13 @@ public class BBVAPriceTicker implements Client{
     private JLabel getBidLabel(String currency, String source) {
         String name = "bid_label_" + currency + "_" + source;
         JLabel m_bidLabel = null;
-        m_bidLabel = (JLabel)components.get(name);
-        if (m_bidLabel==null) {
+        m_bidLabel = (JLabel) components.get(name);
+        if (m_bidLabel == null) {
             m_bidLabel = new JLabel("Bid");
             m_bidLabel.setName(name);
             m_bidLabel.setPreferredSize(new Dimension(50, 50));
             m_bidLabel.addMouseListener(labelMouseListener);
-            m_bidLabel.setEnabled(true);
+            m_bidLabel.setEnabled(false);
             components.put(name, m_bidLabel);
         }
         return m_bidLabel;
@@ -77,13 +78,13 @@ public class BBVAPriceTicker implements Client{
     private JLabel getOfferLabel(String currency, String source) {
         String name = "offer_label_" + currency + "_" + source;
         JLabel m_offerLabel = null;
-        m_offerLabel = (JLabel)components.get(name);
-        if (m_offerLabel==null) {
-            m_offerLabel = new JLabel("Bid");
+        m_offerLabel = (JLabel) components.get(name);
+        if (m_offerLabel == null) {
+            m_offerLabel = new JLabel("Offer");
             m_offerLabel.setName(name);
             m_offerLabel.setPreferredSize(new Dimension(50, 50));
             m_offerLabel.addMouseListener(labelMouseListener);
-            m_offerLabel.setEnabled(true);
+            m_offerLabel.setEnabled(false);
             components.put(name, m_offerLabel);
         }
         return m_offerLabel;
@@ -92,8 +93,8 @@ public class BBVAPriceTicker implements Client{
     private JTextArea getStatusField() {
         String name = "status";
         JTextArea m_status = null;
-        m_status = (JTextArea)components.get(name);
-        if (m_status==null) {
+        m_status = (JTextArea) components.get(name);
+        if (m_status == null) {
             m_status = new JTextArea();
             m_status.setName(name);
             Font font = new Font("Arial", Font.ITALIC, 14);
@@ -125,6 +126,9 @@ public class BBVAPriceTicker implements Client{
             final String source = instrument1[3];
             final DataRequest.Builder dataRequestBuilder = client.createDataRequestForSubscription(1, instrument, PriceDataSourceType.valueOf(source));
             ((JTextArea) components.get("status")).setText("Subscribing PriceData for Instrument:" + instrument + " and Source:" + source);
+            final String bidLabelName ="bid_label_" + instrument + "_" + source;
+            final String offerLabelName ="offer_label_" + instrument + "_" + source;
+
             SwingUtilities.invokeLater(new Runnable() {
                 @Override
                 public void run() {
@@ -133,10 +137,9 @@ public class BBVAPriceTicker implements Client{
                         public void success(PriceData success) {
                             //    System.out.println("Successfully subscribePriceData PriceData"
                             //            + success.toString());
-                            String bidLabelName ="bid_label_" + success.getInstrument().getName() + "_" + success.getPriceDataSourceType();
-                            String offerLabelName ="offer_label_" + success.getInstrument().getName() + "_" + success.getPriceDataSourceType();
                             ((JLabel) components.get(bidLabelName)).setText(success.getRateBid());
-
+                            ((JLabel) components.get(bidLabelName)).setEnabled(true);
+                            ((JLabel) components.get(offerLabelName)).setEnabled(true);
                             int bidRandom = new Random().nextInt(MAX_STATE_COLOR - MIN_STATE_COLOR + 1) + MIN_STATE_COLOR;
                             int offerRandom = new Random().nextInt(MAX_STATE_COLOR - MIN_STATE_COLOR + 1) + MIN_STATE_COLOR;
                             ((JLabel) components.get(bidLabelName)).setForeground(colours[bidRandom]);
@@ -144,13 +147,16 @@ public class BBVAPriceTicker implements Client{
                             ((JLabel) components.get(offerLabelName)).setForeground(colours[offerRandom]);
                             ((JLabel) components.get(bidLabelName)).updateUI();
                             ((JLabel) components.get(offerLabelName)).updateUI();
+
+                            ((JTextArea) components.get("status")).setText("Subscription started for PriceData for Instrument:" + instrument + " and Source:" + source);
                         }
 
                         @Override
                         public void failure(String failure) {
                             ((JTextArea) components.get("status")).setText(failure);
-                            //  System.out.println("Failure subscribePriceData"
-                            //    + failure.toString());
+                            ((JLabel) components.get(bidLabelName)).setEnabled(false);
+                            ((JLabel) components.get(offerLabelName)).setEnabled(false);
+                            ((JTextArea) components.get("status")).setText("Subscription Failed for PriceData for Instrument:" + instrument + " and Source:" + source + " " + failure);
                         }
                     };
                     ((JButton) (components.get("subscribe_button_" + instrument + "_" + source))).setEnabled(false);
@@ -159,7 +165,7 @@ public class BBVAPriceTicker implements Client{
                     currencySubscriptions.put(instrument, requestIdentifier);
                     try {
                         client.subcribeInstrument(currencySubscriptions.get(instrument), dataRequestBuilder, subScribeCallback);
-                    }catch (Exception e){
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
 
@@ -176,6 +182,9 @@ public class BBVAPriceTicker implements Client{
             final String[] instrument1 = instrumen1.split("_");
             final String instrument = instrument1[2];
             final String source = instrument1[3];
+            final String bidLabelName ="bid_label_" + instrument + "_" + source;
+            final String offerLabelName ="offer_label_" + instrument + "_" + source;
+
             final DataRequest.Builder dataRequestBuilder = client.createDataRequestForSubscription(1, instrument, PriceDataSourceType.valueOf(source));
             ((JTextArea) components.get("status")).setText("Requesting unsubscription for PriceData for Instrument:" + instrument + " and Source:" + source);
             SwingUtilities.invokeLater(new Runnable() {
@@ -184,26 +193,26 @@ public class BBVAPriceTicker implements Client{
                     Callback unsubScribeCallback = new Callback<String, String>() {
                         @Override
                         public void success(String success) {
-
-                            ((JLabel) components.get("bid_label_" + success + "_" + source)).setText("Bid");
-                            ((JLabel) components.get("offer_label_" + success + "_" + source)).setText("Offer");
-                            ((JLabel) components.get("bid_label_" + success + "_" + source)).setForeground(Color.BLACK);
-                            ((JLabel) components.get("offer_label_" + success + "_" + source)).setForeground(Color.BLACK);
-                            //  System.out.println("Successfully unsubscribePriceData PriceData"
-                            //         + success.toString());
+                            ((JLabel) components.get(bidLabelName)).setText("Bid");
+                            ((JLabel) components.get(offerLabelName)).setText("Offer");
+                            ((JLabel) components.get(bidLabelName)).setForeground(Color.BLACK);
+                            ((JLabel) components.get(offerLabelName)).setForeground(Color.BLACK);
+                            ((JLabel) components.get(bidLabelName)).setEnabled(false);
+                            ((JLabel) components.get(offerLabelName)).setEnabled(false);
+                            ((JTextArea) components.get("status")).setText("Successfully Unsubscribed for PriceData for Instrument:" + instrument + " and Source:" + source);
                         }
 
                         @Override
                         public void failure(String failure) {
-
-                            ((JLabel) components.get("bid_label_" + failure + "_" + source)).setText("Bid");
-                            ((JLabel) components.get("offer_label_" + failure + "_" + source)).setText("Offer");
-                            ((JLabel) components.get("bid_label_" + failure + "_" + source)).setForeground(Color.BLACK);
-                            ((JLabel) components.get("offer_label_" + failure + "_" + source)).setForeground(Color.BLACK);
+                            ((JLabel) components.get(bidLabelName)).setText("Bid");
+                            ((JLabel) components.get(offerLabelName)).setText("Offer");
+                            ((JLabel) components.get(bidLabelName)).setForeground(Color.BLACK);
+                            ((JLabel) components.get(offerLabelName)).setForeground(Color.BLACK);
                             ((JTextField) components.get("status")).setText("Failure un subscribePriceData"
                                     + failure.toString());
-                            //    System.out.println("Failure unsubscribePriceData"
-                            //           + failure.toString());
+                            ((JTextArea) components.get("status")).setText("Unsubscription Failed for PriceData for Instrument:" + instrument + " and Source:" + source + " " + failure);
+                            ((JLabel) components.get(bidLabelName)).setEnabled(false);
+                            ((JLabel) components.get(offerLabelName)).setEnabled(false);
                         }
                     };
                     ((JButton) (components.get("subscribe_button_" + instrument + "_" + source))).setEnabled(true);
@@ -219,12 +228,13 @@ public class BBVAPriceTicker implements Client{
     final MouseListener labelMouseListener = new MouseAdapter() {
         @Override
         public void mouseClicked(MouseEvent e) {
-            if (e.getClickCount() == 2) {
-                JLabel label = (JLabel) e.getSource();
-                final String instrumen1 = label.getName();
-                final String[] instrument1 = instrumen1.split("_");
-                final String instrument = instrument1[2];
-                final String source = instrument1[3];
+            JLabel label = (JLabel) e.getSource();
+            final String instrumen1 = label.getName();
+            final String[] instrument1 = instrumen1.split("_");
+            final String instrument = instrument1[2];
+            final String source = instrument1[3];
+
+            if (e.getClickCount() == 2 && label.isEnabled()) {
                 setHistoryRequested(instrument, source);
 
                 final DataHistoryRequest.Builder dataRequestBuilder = client.createHistoryValues(1, instrument, PriceDataSourceType.valueOf(source), 50);
@@ -239,32 +249,21 @@ public class BBVAPriceTicker implements Client{
                                 if ((JButton) components.get(name) != null) {
                                     popUpPriceDataHistory((JLabel) components.get("bid_label_" + instrument + "_" + source), success, 50);
                                 }
-                          /*  ((JLabel) components.get("bid_label_" + success.getInstrument().getName() + "_" + success.getPriceDataSourceType())).setText(success.getRateBid());
-                            ((JLabel) components.get("bid_label_" + success.getInstrument().getName() + "_" + success.getPriceDataSourceType())).setForeground(Color.BLUE);
-                            ((JLabel) components.get("offer_label_" + success.getInstrument().getName() + "_" + success.getPriceDataSourceType())).setText(success.getRateOffer());
-                            ((JLabel) components.get("offer_label_" + success.getInstrument().getName() + "_" + success.getPriceDataSourceType())).setForeground(Color.RED);*/
-
                             }
-
                             @Override
                             public void failure(String failure) {
                                 ((JTextArea) components.get("status")).setText(failure);
-                                //  System.out.println("Failure subscribePriceData"
-                                //    + failure.toString());
                             }
                         };
-                        ((JButton) (components.get("subscribe_button_" + instrument + "_" + source))).setEnabled(false);
-                        ((JButton) (components.get("unsubscribe_button_" + instrument + "_" + source))).setEnabled(true);
                         String requestIdentifier = client.getRequestIdentifier();
                         client.getPriceDataHistory(requestIdentifier, dataRequestBuilder, priceDataHistoryCallBack);
-
-                        //// popUpPriceDataHistory((JLabel) components.get("bid_label_" + instrument + "_" + source),new ArrayList<PriceData>());
                     }
                 });
             }
         }
     };
     private JDialog m_dialog;
+
     private JPanel getIndividualSourceBoxes(JPanel container, String source, BBVAPriceTicker individualSource) {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
@@ -344,7 +343,7 @@ public class BBVAPriceTicker implements Client{
 
                     JPanel panel = new JPanel();
 
-                    Dimension dimension =new Dimension(575, 600);
+                    Dimension dimension = new Dimension(575, 600);
                     panel.setSize(new Dimension(dimension));
                     JTable allTable = new JTable(model);
                     TableRowSorter<TableModel> sorter
@@ -362,7 +361,7 @@ public class BBVAPriceTicker implements Client{
                     scroll.setSize(dimension);
                     panel.add(scroll);
                     m_dialog.pack();
-                //   m_dialog.setLocationRelativeTo(getSubscribeButton("AUDUSD","SOURCE1"));
+                    //   m_dialog.setLocationRelativeTo(getSubscribeButton("AUDUSD","SOURCE1"));
                     m_dialog.setSize(dimension);
                     m_dialog.setTitle("Price Data History for " + instrument + " and " + source);
                     m_dialog.add(scroll);
@@ -399,12 +398,10 @@ public class BBVAPriceTicker implements Client{
         container.add(segmentsPanel);
 
 
-
         //container.add(statusPanel);
         individualSource.getIndividualSourceBoxes(segmentsPanel, PriceDataSourceType.SOURCE1.toString(), individualSource);
         individualSource.getIndividualSourceBoxes(segmentsPanel, PriceDataSourceType.SOURCE2.toString(), individualSource);
         individualSource.getIndividualSourceBoxes(segmentsPanel, PriceDataSourceType.SOURCE3.toString(), individualSource);
-
 
 
     }
@@ -440,7 +437,7 @@ public class BBVAPriceTicker implements Client{
 
     @Override
     public void setException(Throwable throwable) {
-        m_throwable =throwable;
+        m_throwable = throwable;
         getStatusField().setText(m_throwable.getLocalizedMessage());
     }
 }
