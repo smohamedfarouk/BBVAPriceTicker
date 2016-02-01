@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12cb9b8e-1abc-42d0-b393-9ffbd63333da" name="Default" comment="Adding tests">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Javadoc/resources/titlebar.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Javadoc/resources/titlebar_end.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Javadoc/com/bbva/ticker/client/UUIDIdentifierFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Javadoc/com/bbva/ticker/client/UnsubscribePriceDataRequestHandler.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Javadoc/com/bbva/ticker/client/UnsubscribePriceDataResponseHandler.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Javadoc/com/bbva/ticker/model/TickDataProtos.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BBVA Java UI Task.odt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JOBS.iws" />
@@ -35,10 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BBVAPriceTicker.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BBVAPriceTicker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/BBVAPriceTicker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7648352">
+            <state vertical-scroll-proportion="-12.0">
               <caret line="145" column="59" selection-start-line="145" selection-start-column="59" selection-end-line="145" selection-end-column="60" />
               <folding />
             </state>
@@ -198,10 +193,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.148148">
+            <state vertical-scroll-proportion="1.190372">
               <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
               <folding />
             </state>
@@ -930,7 +925,7 @@
       <workItem from="1454272539901" duration="103000" />
       <workItem from="1454272664366" duration="43000" />
       <workItem from="1454272824149" duration="3443000" />
-      <workItem from="1454276396753" duration="11106000" />
+      <workItem from="1454276396753" duration="11640000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed File Name">
       <created>1454209158406</created>
@@ -1004,11 +999,17 @@
       <option name="project" value="LOCAL" />
       <updated>1454294112398</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Adding tests">
+      <created>1454294154883</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1454294154883</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205854000" />
+    <option name="totallyTimeSpent" value="206388000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1093,9 +1094,9 @@
     <MESSAGE value="Fix for handling no server available error" />
     <MESSAGE value="Fix bid offer handling mechanisms" />
     <MESSAGE value="UML Diagrams" />
-    <MESSAGE value="Adding tests" />
     <MESSAGE value="Java Doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Java Doc" />
+    <MESSAGE value="Adding tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding tests" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1896,14 +1897,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.148148">
-          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_80/src.zip!/javax/swing/border/Border.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1946,8 +1939,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/BBVAPriceTicker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7648352">
+        <state vertical-scroll-proportion="-12.0">
           <caret line="145" column="59" selection-start-line="145" selection-start-column="59" selection-end-line="145" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.190372">
+          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
           <folding />
         </state>
       </provider>
