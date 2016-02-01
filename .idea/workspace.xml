@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12cb9b8e-1abc-42d0-b393-9ffbd63333da" name="Default" comment="Fix bid offer handling mechanisms">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UML/Client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UML/Model.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UML/Service.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/JOBS.iml" afterPath="$PROJECT_DIR$/BBVAPriceTicker.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Client.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Client.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Server.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Server.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="12cb9b8e-1abc-42d0-b393-9ffbd63333da" name="Default" comment="UML Diagrams">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BBVAPriceTicker.iml" afterPath="$PROJECT_DIR$/BBVAPriceTicker.iml" />
     </list>
     <ignored path="JOBS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,6 +30,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="GetPriceDataConnectionEventHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/service/GetPriceDataConnectionEventHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="JAVA/com.bbva.ticker.client" pinned="false" current-in-tab="false">
         <entry file="uml://JAVA/com.bbva.ticker.client">
           <provider selected="true" editor-type-id="UmlEditorProvider">
@@ -44,202 +47,94 @@
               <ID>JAVA</ID>
               <OriginalElement>com.bbva.ticker.client</OriginalElement>
               <nodes>
-                <node x="39.0" y="181.0">com.bbva.ticker.client.PriceDataHistoryRequestHandler</node>
-                <node x="682.5" y="679.0">com.bbva.ticker.client.SocketAdaptor</node>
-                <node x="476.5" y="95.0">com.bbva.ticker.client.ResponseHandler</node>
-                <node x="741.0" y="35.0">com.bbva.ticker.client.UnsubscribePriceDataResponseHandler</node>
-                <node x="-212.0" y="796.0">com.bbva.ticker.client.ClientSocketFactory</node>
-                <node x="177.0" y="734.0">com.bbva.ticker.client.ClientException</node>
-                <node x="698.5" y="832.0">com.bbva.ticker.client.IdentifierFactory</node>
-                <node x="401.0" y="181.0">com.bbva.ticker.client.UnsubscribePriceDataRequestHandler</node>
-                <node x="-298.0" y="181.0">com.bbva.ticker.client.SubscribePriceDataRequestHandler</node>
-                <node x="258.0" y="-77.0">com.bbva.ticker.client.AbstractCallbackResponseHandler</node>
-                <node x="207.0" y="25.0">com.bbva.ticker.client.PriceDataHistoryResponseHandler</node>
-                <node x="-276.0" y="103.0">com.bbva.ticker.client.PriceDataTableModel</node>
-                <node x="-142.0" y="421.0">com.bbva.ticker.client.BBVAPriceTicker</node>
-                <node x="-297.0" y="25.0">com.bbva.ticker.client.SubscribePriceDataResponseHandler</node>
-                <node x="468.0" y="746.0">com.bbva.ticker.client.SimpleSocketAdaptor</node>
-                <node x="290.0" y="860.0">com.bbva.ticker.client.UUIDIdentifierFactory</node>
-                <node x="-320.0" y="684.0">com.bbva.ticker.client.PricingServiceClient</node>
-                <node x="788.0" y="278.0">com.bbva.ticker.client.ResponseListener</node>
-                <node x="-288.0" y="290.0">com.bbva.ticker.client.Client</node>
-                <node x="889.0" y="727.0">com.bbva.ticker.client.Session</node>
-                <node x="252.0" y="510.0">com.bbva.ticker.client.PricingServiceProxy</node>
-                <node x="151.0" y="93.0">com.bbva.ticker.client.RequestHandler</node>
-                <node x="528.0" y="501.0">com.bbva.ticker.client.RequestPublisher</node>
+                <node x="239.0" y="315.0">com.bbva.ticker.client.PriceDataHistoryRequestHandler</node>
+                <node x="342.0" y="390.0">com.bbva.ticker.client.SocketAdaptor</node>
+                <node x="291.0" y="0.0">com.bbva.ticker.client.ResponseHandler</node>
+                <node x="481.0" y="160.0">com.bbva.ticker.client.UnsubscribePriceDataResponseHandler</node>
+                <node x="191.0" y="545.0">com.bbva.ticker.client.ClientSocketFactory</node>
+                <node x="170.0" y="620.0">com.bbva.ticker.client.ClientException</node>
+                <node x="530.5" y="390.0">com.bbva.ticker.client.IdentifierFactory</node>
+                <node x="465.0" y="315.0">com.bbva.ticker.client.UnsubscribePriceDataRequestHandler</node>
+                <node x="0.0" y="315.0">com.bbva.ticker.client.SubscribePriceDataRequestHandler</node>
+                <node x="246.49999999999997" y="80.0">com.bbva.ticker.client.AbstractCallbackResponseHandler</node>
+                <node x="246.99999999999997" y="160.0">com.bbva.ticker.client.PriceDataHistoryResponseHandler</node>
+                <node x="0.0" y="545.0">com.bbva.ticker.client.PriceDataTableModel</node>
+                <node x="159.0" y="470.0">com.bbva.ticker.client.BBVAPriceTicker</node>
+                <node x="0.0" y="160.0">com.bbva.ticker.client.SubscribePriceDataResponseHandler</node>
+                <node x="324.0" y="470.0">com.bbva.ticker.client.SimpleSocketAdaptor</node>
+                <node x="517.0" y="470.0">com.bbva.ticker.client.UUIDIdentifierFactory</node>
+                <node x="0.0" y="470.0">com.bbva.ticker.client.PricingServiceClient</node>
+                <node x="558.0" y="545.0">com.bbva.ticker.client.ResponseListener</node>
+                <node x="111.75" y="390.0">com.bbva.ticker.client.Client</node>
+                <node x="332.0" y="620.0">com.bbva.ticker.client.Session</node>
+                <node x="375.0" y="545.0">com.bbva.ticker.client.PricingServiceProxy</node>
+                <node x="283.0" y="235.0">com.bbva.ticker.client.RequestHandler</node>
+                <node x="0.0" y="620.0">com.bbva.ticker.client.RequestPublisher</node>
               </nodes>
               <notes />
               <edges>
-                <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.UUIDIdentifierFactory">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
                 <edge source="com.bbva.ticker.client.UUIDIdentifierFactory" target="com.bbva.ticker.client.IdentifierFactory">
                   <point x="0.0" y="-15.0" />
                   <point x="0.0" y="15.0" />
                 </edge>
-                <edge source="com.bbva.ticker.client.ResponseListener" target="com.bbva.ticker.client.ResponseHandler">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
                 <edge source="com.bbva.ticker.client.SubscribePriceDataResponseHandler" target="com.bbva.ticker.client.AbstractCallbackResponseHandler">
-                  <point x="0.0" y="-26.0" />
-                  <point x="-55.0" y="0.0" />
-                  <point x="325.16666666666663" y="0.0" />
-                  <point x="-134.33333333333334" y="26.0" />
+                  <point x="0.0" y="-15.0" />
+                  <point x="113.5" y="135.0" />
+                  <point x="282.33333333333326" y="135.0" />
+                  <point x="-71.66666666666669" y="15.0" />
                 </edge>
                 <edge source="com.bbva.ticker.client.UnsubscribePriceDataResponseHandler" target="com.bbva.ticker.client.AbstractCallbackResponseHandler">
-                  <point x="0.0" y="-26.0" />
-                  <point x="971.5" y="0.0" />
-                  <point x="593.8333333333334" y="0.0" />
-                  <point x="134.33333333333337" y="26.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.PricingServiceClient" target="com.bbva.ticker.client.PricingServiceProxy">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="-15.0" />
+                  <point x="601.5" y="135.0" />
+                  <point x="425.66666666666663" y="135.0" />
+                  <point x="71.66666666666669" y="15.0" />
                 </edge>
                 <edge source="com.bbva.ticker.client.SimpleSocketAdaptor" target="com.bbva.ticker.client.SocketAdaptor">
-                  <point x="0.0" y="-26.0" />
+                  <point x="0.0" y="-15.0" />
                   <point x="0.0" y="15.0" />
                 </edge>
-                <edge source="com.bbva.ticker.client.Session" target="com.bbva.ticker.client.RequestPublisher">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.ResponseHandler">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.PriceDataHistoryRequestHandler">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
                 <edge source="com.bbva.ticker.client.SubscribePriceDataRequestHandler" target="com.bbva.ticker.client.RequestHandler">
-                  <point x="0.0" y="-26.0" />
-                  <point x="-138.5" y="177.0" />
-                  <point x="171.66666666666669" y="177.0" />
+                  <point x="0.0" y="-15.0" />
+                  <point x="109.5" y="290.0" />
+                  <point x="302.6666666666667" y="290.0" />
                   <point x="-39.333333333333314" y="15.0" />
                 </edge>
-                <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.Session">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.ClientSocketFactory">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.SubscribePriceDataRequestHandler">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.ResponseListener">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
                 <edge source="com.bbva.ticker.client.PriceDataHistoryResponseHandler" target="com.bbva.ticker.client.AbstractCallbackResponseHandler">
-                  <point x="0.0" y="-26.0" />
-                  <point x="0.0" y="26.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.BBVAPriceTicker" target="com.bbva.ticker.client.PriceDataTableModel">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.SimpleSocketAdaptor" target="com.bbva.ticker.client.ClientException">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="-15.0" />
+                  <point x="0.0" y="15.0" />
                 </edge>
                 <edge source="com.bbva.ticker.client.PricingServiceClient" target="com.bbva.ticker.client.Client">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.Session" target="com.bbva.ticker.client.ResponseListener">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="-15.0" />
+                  <point x="69.5" y="445.0" />
+                  <point x="128.0" y="445.0" />
+                  <point x="-16.25" y="15.0" />
                 </edge>
                 <edge source="com.bbva.ticker.client.AbstractCallbackResponseHandler" target="com.bbva.ticker.client.ResponseHandler">
-                  <point x="0.0" y="-26.0" />
+                  <point x="0.0" y="-15.0" />
                   <point x="0.0" y="15.0" />
                 </edge>
                 <edge source="com.bbva.ticker.client.BBVAPriceTicker" target="com.bbva.ticker.client.Client">
                   <point x="0.0" y="-15.0" />
-                  <point x="-144.0" y="338.0" />
-                  <point x="-147.25" y="354.0" />
+                  <point x="219.0" y="445.0" />
+                  <point x="160.5" y="445.0" />
                   <point x="16.25" y="15.0" />
                 </edge>
                 <edge source="com.bbva.ticker.client.UnsubscribePriceDataRequestHandler" target="com.bbva.ticker.client.RequestHandler">
-                  <point x="0.0" y="-26.0" />
-                  <point x="567.5" y="177.0" />
-                  <point x="250.33333333333337" y="177.0" />
+                  <point x="0.0" y="-15.0" />
+                  <point x="581.5" y="290.0" />
+                  <point x="381.33333333333337" y="290.0" />
                   <point x="39.33333333333337" y="15.0" />
                 </edge>
-                <edge source="com.bbva.ticker.client.ResponseListener" target="com.bbva.ticker.client.SocketAdaptor">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.Client">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.PriceDataHistoryResponseHandler">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.BBVAPriceTicker" target="com.bbva.ticker.client.PricingServiceClient">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.RequestPublisher" target="com.bbva.ticker.client.SocketAdaptor">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.UnsubscribePriceDataResponseHandler">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.Session" target="com.bbva.ticker.client.IdentifierFactory">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.UnsubscribePriceDataRequestHandler">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.PricingServiceClient" target="com.bbva.ticker.client.UUIDIdentifierFactory">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.RequestPublisher">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
                 <edge source="com.bbva.ticker.client.PriceDataHistoryRequestHandler" target="com.bbva.ticker.client.RequestHandler">
-                  <point x="0.0" y="-26.0" />
+                  <point x="0.0" y="-15.0" />
                   <point x="0.0" y="15.0" />
                 </edge>
-                <edge source="com.bbva.ticker.client.Session" target="com.bbva.ticker.client.ResponseHandler">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.ClientSocketFactory" target="com.bbva.ticker.client.ClientException">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.SimpleSocketAdaptor">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.SubscribePriceDataResponseHandler">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="0.9027355623100304" x="-213.27104377104382" y="178.85858585858585" />
+              <settings layout="Hierarchic Group" zoom="1.0" x="-48.0" y="231.0" />
               <SelectedNodes>
-                <node>com.bbva.ticker.client.SocketAdaptor</node>
+                <node>com.bbva.ticker.client.RequestHandler</node>
               </SelectedNodes>
-              <Categories>
-                <Category>Constructors</Category>
-              </Categories>
+              <Categories />
               <SCOPE>All</SCOPE>
               <VISIBILITY>private</VISIBILITY>
             </state>
@@ -260,380 +155,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JAVA/com.bbva.ticker.model" pinned="false" current-in-tab="true">
-        <entry file="uml://JAVA/com.bbva.ticker.model">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement>com.bbva.ticker.model</OriginalElement>
-              <nodes>
-                <node x="-195.0" y="328.0">com.bbva.ticker.model.PriceData</node>
-                <node x="-86.0" y="175.0">com.bbva.ticker.model.PriceDataSourceType</node>
-                <node x="-478.0" y="74.0">com.bbva.ticker.model.InstrumentOrBuilder</node>
-                <node x="55.0" y="86.0">com.bbva.ticker.model.CallbackWrapper</node>
-                <node x="71.0" y="0.0">com.bbva.ticker.model.DataRequestOrBuilder</node>
-                <node x="-348.0" y="379.0">com.bbva.ticker.model.PriceDataOrBuilder</node>
-                <node x="169.0" y="203.0">com.bbva.ticker.model.TickDataProtos</node>
-                <node x="44.0" y="343.0">com.bbva.ticker.model.ResponseOrBuilder</node>
-                <node x="-307.0" y="21.0">com.bbva.ticker.model.Instrument</node>
-                <node x="-188.0" y="-120.0">com.bbva.ticker.model.PricingType</node>
-                <node x="-66.0" y="-177.0">com.bbva.ticker.model.Request</node>
-                <node x="-74.0" y="403.0">com.bbva.ticker.model.Response</node>
-                <node x="64.0" y="-244.0">com.bbva.ticker.model.DataHistoryRequestOrBuilder</node>
-                <node x="43.0" y="-167.0">com.bbva.ticker.model.RequestOrBuilder</node>
-                <node x="-329.0" y="-240.0">com.bbva.ticker.model.DataHistoryRequest</node>
-                <node x="-86.0" y="-3.0">com.bbva.ticker.model.DataRequest</node>
-                <node x="54.0" y="238.0">com.bbva.ticker.model.Callback</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="com.bbva.ticker.model.Response" target="com.bbva.ticker.model.ResponseOrBuilder">
-                  <point x="0.0" y="-15.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.model.Response" target="com.bbva.ticker.model.PriceData">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.model.Request" target="com.bbva.ticker.model.DataHistoryRequest">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.model.PriceData" target="com.bbva.ticker.model.PriceDataOrBuilder">
-                  <point x="0.0" y="-15.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.model.DataHistoryRequest" target="com.bbva.ticker.model.PriceDataSourceType">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.model.Callback" target="com.bbva.ticker.model.PriceData">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.model.DataHistoryRequest" target="com.bbva.ticker.model.DataHistoryRequestOrBuilder">
-                  <point x="0.0" y="-15.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.model.DataRequest" target="com.bbva.ticker.model.DataRequestOrBuilder">
-                  <point x="0.0" y="-15.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.model.DataRequest" target="com.bbva.ticker.model.Instrument">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.model.DataHistoryRequest" target="com.bbva.ticker.model.Instrument">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.model.Request" target="com.bbva.ticker.model.DataRequest">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.model.DataHistoryRequest" target="com.bbva.ticker.model.PricingType">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.model.PriceData" target="com.bbva.ticker.model.PriceDataSourceType">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.model.PriceData" target="com.bbva.ticker.model.Instrument">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.model.DataRequest" target="com.bbva.ticker.model.PriceDataSourceType">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.model.Instrument" target="com.bbva.ticker.model.InstrumentOrBuilder">
-                  <point x="0.0" y="-15.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.model.CallbackWrapper" target="com.bbva.ticker.model.Callback">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.model.DataRequest" target="com.bbva.ticker.model.PricingType">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.model.Request" target="com.bbva.ticker.model.RequestOrBuilder">
-                  <point x="0.0" y="-15.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="230.0" y="-35.0" />
-              <SelectedNodes />
-              <Categories />
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>private</VISIBILITY>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JAVA/com.bbva.ticker.service" pinned="false" current-in-tab="false">
-        <entry file="uml://JAVA/com.bbva.ticker.service">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement>com.bbva.ticker.service</OriginalElement>
-              <nodes>
-                <node x="1380.3512212324013" y="625.6964530369919">com.bbva.ticker.DataSource.PriceSourceAdapter</node>
-                <node x="1292.5695383278496" y="415.38590348607084">com.bbva.ticker.service.ShutDownHookImpl</node>
-                <node x="1063.737124718472" y="557.3907748515757">com.bbva.ticker.service.ServerSocketFactory</node>
-                <node x="484.69181953113093" y="311.9515908052976">com.bbva.ticker.service.ClientConnectionEventExecutor</node>
-                <node x="260.0624999999999" y="310.0">com.bbva.ticker.service.PriceSubscriptionEventPublisher</node>
-                <node x="721.337047115238" y="312.92738620794637">com.bbva.ticker.service.ClientConnectionEventPublisher</node>
-                <node x="1152.8072647702297" y="686.1957680012177">com.bbva.ticker.DataSource.SourcePriceDataStore</node>
-                <node x="1336.7707866152596" y="522.2621403562187">com.bbva.ticker.service.ShutDownHook</node>
-                <node x="614.6079383887416" y="661.3240414012854">com.bbva.ticker.service.PricingServer</node>
-                <node x="1412.3529338218361" y="684.9931496422594">com.bbva.ticker.DataSource.PriceDataMap</node>
-                <node x="869.1969359530589" y="683.7296392144924">com.bbva.ticker.DataSource.PriceSourceDataAdapterImpl</node>
-                <node x="147.2952218754756" y="532.7842898462476">com.bbva.ticker.service.ServerException</node>
-                <node x="864.2248471355352" y="180.73374942913685">com.bbva.ticker.service.AbstractPublisher</node>
-                <node x="970.7319321814582" y="310.9757954026488">com.bbva.ticker.service.PriceSubscriptionEventExecutor</node>
-                <node x="402.0248397435897" y="80.0">com.bbva.ticker.service.ClientEvent</node>
-                <node x="419.8998397435897" y="170.0">com.bbva.ticker.service.ClientConnectionEvent</node>
-                <node x="1187.828750570863" y="310.0">com.bbva.ticker.service.ClientSocketPublisher</node>
-                <node x="556.6765203988427" y="739.3499771654742">com.bbva.ticker.service.PricingService</node>
-                <node x="1261.7931454217753" y="179.75795402648808">com.bbva.ticker.service.AbstractClientConnectionEventHandler</node>
-                <node x="64.06249999999989" y="310.0">com.bbva.ticker.service.ClientConnectionPublisher</node>
-                <node x="1355.9705316297216" y="311.9515908052976">com.bbva.ticker.service.GetPriceDataConnectionEventHandler</node>
-                <node x="244.89983974358972" y="170.0">com.bbva.ticker.service.PriceSubscriptionEvent</node>
-                <node x="298.1922168177258" y="700.6058760846399">com.bbva.ticker.service.ClientConnection</node>
-                <node x="933.1444565393701" y="60.48409194702391">com.bbva.ticker.service.Listener</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="com.bbva.ticker.service.PriceSubscriptionEvent" target="com.bbva.ticker.service.ClientConnection">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.ClientConnectionPublisher" target="com.bbva.ticker.service.ServerException">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.PricingServer" target="com.bbva.ticker.service.PriceSubscriptionEventExecutor">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.ClientConnectionPublisher" target="com.bbva.ticker.service.ClientConnection">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.AbstractClientConnectionEventHandler" target="com.bbva.ticker.service.Listener">
-                  <point x="0.0" y="-15.0" />
-                  <point x="1383.7689408244244" y="130.97579540264883" />
-                  <point x="997.9912749287749" y="130.0" />
-                  <point x="31.25" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.ClientConnectionEventExecutor" target="com.bbva.ticker.service.ClientConnection">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.PriceSubscriptionEventPublisher" target="com.bbva.ticker.service.ClientConnection">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.PricingServer" target="com.bbva.ticker.service.PricingService">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.PriceSubscriptionEvent" target="com.bbva.ticker.service.ClientEvent">
-                  <point x="38.75" y="-15.0" />
-                  <point x="361.1498397435897" y="150.0" />
-                  <point x="425.5248397435897" y="150.0" />
-                  <point x="-23.5" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.PricingServer" target="com.bbva.ticker.service.ServerSocketFactory">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.GetPriceDataConnectionEventHandler" target="com.bbva.ticker.service.AbstractClientConnectionEventHandler">
-                  <point x="-58.75" y="-15.0" />
-                  <point x="1433.260644280049" y="289.02420459735123" />
-                  <point x="1431.5829155542153" y="266.5809103364287" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.PricingServer" target="com.bbva.ticker.service.ClientConnectionEventPublisher">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.PriceSubscriptionEventExecutor" target="com.bbva.ticker.service.Listener">
-                  <point x="50.25" y="-15.0" />
-                  <point x="1128.3124999999998" y="290.0" />
-                  <point x="1172.641114672365" y="290.0" />
-                  <point x="1172.641114672365" y="140.0" />
-                  <point x="985.4912749287749" y="140.0" />
-                  <point x="18.75" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.PricingServer" target="com.bbva.ticker.service.ClientConnection">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.ClientConnectionEventExecutor" target="com.bbva.ticker.service.Listener">
-                  <point x="0.0" y="-15.0" />
-                  <point x="611.0624999999999" y="250.0" />
-                  <point x="677.8494480056983" y="250.0" />
-                  <point x="677.8494480056983" y="140.0" />
-                  <point x="947.9912749287749" y="140.0" />
-                  <point x="-18.75" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.PricingServer" target="com.bbva.ticker.service.ClientConnectionPublisher">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.PriceSubscriptionEventExecutor" target="com.bbva.ticker.service.AbstractPublisher">
-                  <point x="-50.25" y="-15.0" />
-                  <point x="1027.8124999999998" y="280.0" />
-                  <point x="934.1041666666664" y="280.0" />
-                  <point x="31.75" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.ClientConnection" target="com.bbva.ticker.service.ServerException">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.ClientConnectionEventExecutor" target="com.bbva.ticker.service.AbstractPublisher">
-                  <point x="67.33333333333348" y="-15.0" />
-                  <point x="678.3958333333334" y="280.0" />
-                  <point x="891.7708333333329" y="280.0" />
-                  <point x="-10.583333333333485" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.DataSource.SourcePriceDataStore" target="com.bbva.ticker.DataSource.PriceDataMap">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.ClientSocketPublisher" target="com.bbva.ticker.service.ServerSocketFactory">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.PriceSubscriptionEventPublisher" target="com.bbva.ticker.service.AbstractPublisher">
-                  <point x="68.0" y="-15.0" />
-                  <point x="430.0624999999999" y="270.0" />
-                  <point x="870.6041666666664" y="270.0" />
-                  <point x="-31.75" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.PricingServer" target="com.bbva.ticker.DataSource.PriceSourceDataAdapterImpl">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.ClientConnectionEvent" target="com.bbva.ticker.service.ClientEvent">
-                  <point x="39.0" y="-15.0" />
-                  <point x="536.8998397435897" y="150.0" />
-                  <point x="472.5248397435897" y="150.0" />
-                  <point x="23.5" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.ClientConnectionEvent" target="com.bbva.ticker.service.ClientConnection">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.PricingServer" target="com.bbva.ticker.service.GetPriceDataConnectionEventHandler">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.PricingServer" target="com.bbva.ticker.service.ClientSocketPublisher">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.PricingServer" target="com.bbva.ticker.service.PriceSubscriptionEventPublisher">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.PriceSubscriptionEventPublisher" target="com.bbva.ticker.service.PriceSubscriptionEvent">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.PricingServer" target="com.bbva.ticker.service.ShutDownHookImpl">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.ClientConnectionEventPublisher" target="com.bbva.ticker.service.AbstractPublisher">
-                  <point x="0.0" y="-15.0" />
-                  <point x="855.0624999999998" y="290.0" />
-                  <point x="912.9374999999999" y="290.0" />
-                  <point x="10.583333333333485" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.ClientConnectionEventPublisher" target="com.bbva.ticker.service.ClientConnectionEvent">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.ClientConnectionPublisher" target="com.bbva.ticker.service.AbstractPublisher">
-                  <point x="66.0" y="-15.0" />
-                  <point x="218.0624999999999" y="260.0" />
-                  <point x="849.4374999999999" y="260.0" />
-                  <point x="-52.916666666666515" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.DataSource.PriceSourceDataAdapterImpl" target="com.bbva.ticker.DataSource.SourcePriceDataStore">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.ClientSocketPublisher" target="com.bbva.ticker.service.AbstractPublisher">
-                  <point x="-37.25" y="-15.0" />
-                  <point x="1235.8124999999998" y="270.0" />
-                  <point x="955.2708333333329" y="270.0" />
-                  <point x="52.916666666666515" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.AbstractPublisher" target="com.bbva.ticker.service.Listener">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.ClientConnectionPublisher" target="com.bbva.ticker.service.Listener">
-                  <point x="22.0" y="-15.0" />
-                  <point x="174.0624999999999" y="250.0" />
-                  <point x="586.3998397435897" y="250.0" />
-                  <point x="586.3998397435897" y="130.0" />
-                  <point x="935.4912749287749" y="130.0" />
-                  <point x="-31.25" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.ClientConnectionEventPublisher" target="com.bbva.ticker.service.Listener">
-                  <point x="68.33333333333326" y="-15.0" />
-                  <point x="923.395833333333" y="290.0" />
-                  <point x="1061.3132036850543" y="224.62170802253004" />
-                  <point x="1003.7412749287749" y="150.0" />
-                  <point x="972.9912749287749" y="150.0" />
-                  <point x="6.25" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.GetPriceDataConnectionEventHandler" target="com.bbva.ticker.DataSource.PriceSourceAdapter">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.ShutDownHookImpl" target="com.bbva.ticker.service.ShutDownHook">
-                  <point x="-35.5" y="-15.0" />
-                  <point x="1302.6988578589805" y="484.1832851271123" />
-                  <point x="1250.1511337000522" y="585.666007002588" />
-                  <point x="-29.5" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.DataSource.PriceSourceDataAdapterImpl" target="com.bbva.ticker.DataSource.PriceSourceAdapter">
-                  <point x="-62.0" y="-15.0" />
-                  <point x="1204.6451015794858" y="622.7462323032426" />
-                  <point x="1266.2488464417174" y="638.3589587456233" />
-                  <point x="34.5" y="15.0" />
-                </edge>
-                <edge source="com.bbva.ticker.service.PricingServer" target="com.bbva.ticker.service.ClientConnectionEventExecutor">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.024804992199688" x="278.1908966357132" y="186.1908966357132" />
-              <SelectedNodes>
-                <node>com.bbva.ticker.service.AbstractPublisher</node>
-              </SelectedNodes>
-              <Categories />
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>private</VISIBILITY>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetPriceDataConnectionEventHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/service/GetPriceDataConnectionEventHandler.java">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.4081921">
+              <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Service.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UML/Service.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -844,61 +379,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generated-sources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BBVAPriceTicker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BBVAPriceTicker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BBVAPriceTicker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BBVAPriceTicker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BBVAPriceTicker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BBVAPriceTicker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -921,68 +402,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ticker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataSource" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BBVAPriceTicker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BBVAPriceTicker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="production" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BBVAPriceTicker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BBVAPriceTicker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artifacts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BBVAPriceTicker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BBVAPriceTicker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artifacts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1536,7 +955,7 @@
       <workItem from="1454272539901" duration="103000" />
       <workItem from="1454272664366" duration="43000" />
       <workItem from="1454272824149" duration="3443000" />
-      <workItem from="1454276396753" duration="7961000" />
+      <workItem from="1454276396753" duration="8210000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed File Name">
       <created>1454209158406</created>
@@ -1592,11 +1011,17 @@
       <option name="project" value="LOCAL" />
       <updated>1454288733365</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="UML Diagrams">
+      <created>1454291017670</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1454291017670</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202709000" />
+    <option name="totallyTimeSpent" value="202958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1608,11 +1033,11 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43446088" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19344608" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47357294" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09166667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32395834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3255814" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1680,7 +1105,8 @@
     <MESSAGE value="Fix" />
     <MESSAGE value="Fix for handling no server available error" />
     <MESSAGE value="Fix bid offer handling mechanisms" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix bid offer handling mechanisms" />
+    <MESSAGE value="UML Diagrams" />
+    <option name="LAST_COMMIT_MESSAGE" value="UML Diagrams" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1747,13 +1173,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/IdentifierFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/client/PriceDataHistoryRequestHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1830,6 +1249,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2045,14 +1465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.111111">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://MODULES/mdl-JOBS">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -2121,14 +1533,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/service/GetPriceDataConnectionEventHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -2395,208 +1799,142 @@
         </state>
       </provider>
     </entry>
+    <entry file="uml://JAVA/com.bbva.ticker.model">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.bbva.ticker.model</OriginalElement>
+          <nodes>
+            <node x="" y="">com.bbva.ticker.model.PriceData</node>
+            <node x="" y="">com.bbva.ticker.model.PriceDataSourceType</node>
+            <node x="" y="">com.bbva.ticker.model.InstrumentOrBuilder</node>
+            <node x="" y="">com.bbva.ticker.model.CallbackWrapper</node>
+            <node x="" y="">com.bbva.ticker.model.DataRequestOrBuilder</node>
+            <node x="" y="">com.bbva.ticker.model.PriceDataOrBuilder</node>
+            <node x="" y="">com.bbva.ticker.model.TickDataProtos</node>
+            <node x="" y="">com.bbva.ticker.model.ResponseOrBuilder</node>
+            <node x="" y="">com.bbva.ticker.model.Instrument</node>
+            <node x="" y="">com.bbva.ticker.model.PricingType</node>
+            <node x="" y="">com.bbva.ticker.model.Request</node>
+            <node x="" y="">com.bbva.ticker.model.Response</node>
+            <node x="" y="">com.bbva.ticker.model.DataHistoryRequestOrBuilder</node>
+            <node x="" y="">com.bbva.ticker.model.RequestOrBuilder</node>
+            <node x="" y="">com.bbva.ticker.model.DataHistoryRequest</node>
+            <node x="" y="">com.bbva.ticker.model.DataRequest</node>
+            <node x="" y="">com.bbva.ticker.model.Callback</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="230.0" y="-35.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bbva/ticker/service/GetPriceDataConnectionEventHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="uml://JAVA/com.bbva.ticker.client">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
           <ID>JAVA</ID>
           <OriginalElement>com.bbva.ticker.client</OriginalElement>
           <nodes>
-            <node x="39.0" y="181.0">com.bbva.ticker.client.PriceDataHistoryRequestHandler</node>
-            <node x="682.5" y="679.0">com.bbva.ticker.client.SocketAdaptor</node>
-            <node x="476.5" y="95.0">com.bbva.ticker.client.ResponseHandler</node>
-            <node x="741.0" y="35.0">com.bbva.ticker.client.UnsubscribePriceDataResponseHandler</node>
-            <node x="-212.0" y="796.0">com.bbva.ticker.client.ClientSocketFactory</node>
-            <node x="177.0" y="734.0">com.bbva.ticker.client.ClientException</node>
-            <node x="698.5" y="832.0">com.bbva.ticker.client.IdentifierFactory</node>
-            <node x="401.0" y="181.0">com.bbva.ticker.client.UnsubscribePriceDataRequestHandler</node>
-            <node x="-298.0" y="181.0">com.bbva.ticker.client.SubscribePriceDataRequestHandler</node>
-            <node x="258.0" y="-77.0">com.bbva.ticker.client.AbstractCallbackResponseHandler</node>
-            <node x="207.0" y="25.0">com.bbva.ticker.client.PriceDataHistoryResponseHandler</node>
-            <node x="-276.0" y="103.0">com.bbva.ticker.client.PriceDataTableModel</node>
-            <node x="-142.0" y="421.0">com.bbva.ticker.client.BBVAPriceTicker</node>
-            <node x="-297.0" y="25.0">com.bbva.ticker.client.SubscribePriceDataResponseHandler</node>
-            <node x="468.0" y="746.0">com.bbva.ticker.client.SimpleSocketAdaptor</node>
-            <node x="290.0" y="860.0">com.bbva.ticker.client.UUIDIdentifierFactory</node>
-            <node x="-320.0" y="684.0">com.bbva.ticker.client.PricingServiceClient</node>
-            <node x="788.0" y="278.0">com.bbva.ticker.client.ResponseListener</node>
-            <node x="-288.0" y="290.0">com.bbva.ticker.client.Client</node>
-            <node x="889.0" y="727.0">com.bbva.ticker.client.Session</node>
-            <node x="252.0" y="510.0">com.bbva.ticker.client.PricingServiceProxy</node>
-            <node x="151.0" y="93.0">com.bbva.ticker.client.RequestHandler</node>
-            <node x="528.0" y="501.0">com.bbva.ticker.client.RequestPublisher</node>
+            <node x="239.0" y="315.0">com.bbva.ticker.client.PriceDataHistoryRequestHandler</node>
+            <node x="342.0" y="390.0">com.bbva.ticker.client.SocketAdaptor</node>
+            <node x="291.0" y="0.0">com.bbva.ticker.client.ResponseHandler</node>
+            <node x="481.0" y="160.0">com.bbva.ticker.client.UnsubscribePriceDataResponseHandler</node>
+            <node x="191.0" y="545.0">com.bbva.ticker.client.ClientSocketFactory</node>
+            <node x="170.0" y="620.0">com.bbva.ticker.client.ClientException</node>
+            <node x="530.5" y="390.0">com.bbva.ticker.client.IdentifierFactory</node>
+            <node x="465.0" y="315.0">com.bbva.ticker.client.UnsubscribePriceDataRequestHandler</node>
+            <node x="0.0" y="315.0">com.bbva.ticker.client.SubscribePriceDataRequestHandler</node>
+            <node x="246.49999999999997" y="80.0">com.bbva.ticker.client.AbstractCallbackResponseHandler</node>
+            <node x="246.99999999999997" y="160.0">com.bbva.ticker.client.PriceDataHistoryResponseHandler</node>
+            <node x="0.0" y="545.0">com.bbva.ticker.client.PriceDataTableModel</node>
+            <node x="159.0" y="470.0">com.bbva.ticker.client.BBVAPriceTicker</node>
+            <node x="0.0" y="160.0">com.bbva.ticker.client.SubscribePriceDataResponseHandler</node>
+            <node x="324.0" y="470.0">com.bbva.ticker.client.SimpleSocketAdaptor</node>
+            <node x="517.0" y="470.0">com.bbva.ticker.client.UUIDIdentifierFactory</node>
+            <node x="0.0" y="470.0">com.bbva.ticker.client.PricingServiceClient</node>
+            <node x="558.0" y="545.0">com.bbva.ticker.client.ResponseListener</node>
+            <node x="111.75" y="390.0">com.bbva.ticker.client.Client</node>
+            <node x="332.0" y="620.0">com.bbva.ticker.client.Session</node>
+            <node x="375.0" y="545.0">com.bbva.ticker.client.PricingServiceProxy</node>
+            <node x="283.0" y="235.0">com.bbva.ticker.client.RequestHandler</node>
+            <node x="0.0" y="620.0">com.bbva.ticker.client.RequestPublisher</node>
           </nodes>
           <notes />
           <edges>
-            <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.UUIDIdentifierFactory">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
             <edge source="com.bbva.ticker.client.UUIDIdentifierFactory" target="com.bbva.ticker.client.IdentifierFactory">
               <point x="0.0" y="-15.0" />
               <point x="0.0" y="15.0" />
             </edge>
-            <edge source="com.bbva.ticker.client.ResponseListener" target="com.bbva.ticker.client.ResponseHandler">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
             <edge source="com.bbva.ticker.client.SubscribePriceDataResponseHandler" target="com.bbva.ticker.client.AbstractCallbackResponseHandler">
-              <point x="0.0" y="-26.0" />
-              <point x="-55.0" y="0.0" />
-              <point x="325.16666666666663" y="0.0" />
-              <point x="-134.33333333333334" y="26.0" />
+              <point x="0.0" y="-15.0" />
+              <point x="113.5" y="135.0" />
+              <point x="282.33333333333326" y="135.0" />
+              <point x="-71.66666666666669" y="15.0" />
             </edge>
             <edge source="com.bbva.ticker.client.UnsubscribePriceDataResponseHandler" target="com.bbva.ticker.client.AbstractCallbackResponseHandler">
-              <point x="0.0" y="-26.0" />
-              <point x="971.5" y="0.0" />
-              <point x="593.8333333333334" y="0.0" />
-              <point x="134.33333333333337" y="26.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.PricingServiceClient" target="com.bbva.ticker.client.PricingServiceProxy">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="0.0" y="-15.0" />
+              <point x="601.5" y="135.0" />
+              <point x="425.66666666666663" y="135.0" />
+              <point x="71.66666666666669" y="15.0" />
             </edge>
             <edge source="com.bbva.ticker.client.SimpleSocketAdaptor" target="com.bbva.ticker.client.SocketAdaptor">
-              <point x="0.0" y="-26.0" />
+              <point x="0.0" y="-15.0" />
               <point x="0.0" y="15.0" />
             </edge>
-            <edge source="com.bbva.ticker.client.Session" target="com.bbva.ticker.client.RequestPublisher">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.ResponseHandler">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.PriceDataHistoryRequestHandler">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
             <edge source="com.bbva.ticker.client.SubscribePriceDataRequestHandler" target="com.bbva.ticker.client.RequestHandler">
-              <point x="0.0" y="-26.0" />
-              <point x="-138.5" y="177.0" />
-              <point x="171.66666666666669" y="177.0" />
+              <point x="0.0" y="-15.0" />
+              <point x="109.5" y="290.0" />
+              <point x="302.6666666666667" y="290.0" />
               <point x="-39.333333333333314" y="15.0" />
             </edge>
-            <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.Session">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.ClientSocketFactory">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.SubscribePriceDataRequestHandler">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.ResponseListener">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
             <edge source="com.bbva.ticker.client.PriceDataHistoryResponseHandler" target="com.bbva.ticker.client.AbstractCallbackResponseHandler">
-              <point x="0.0" y="-26.0" />
-              <point x="0.0" y="26.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.BBVAPriceTicker" target="com.bbva.ticker.client.PriceDataTableModel">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.SimpleSocketAdaptor" target="com.bbva.ticker.client.ClientException">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="0.0" y="-15.0" />
+              <point x="0.0" y="15.0" />
             </edge>
             <edge source="com.bbva.ticker.client.PricingServiceClient" target="com.bbva.ticker.client.Client">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.Session" target="com.bbva.ticker.client.ResponseListener">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="0.0" y="-15.0" />
+              <point x="69.5" y="445.0" />
+              <point x="128.0" y="445.0" />
+              <point x="-16.25" y="15.0" />
             </edge>
             <edge source="com.bbva.ticker.client.AbstractCallbackResponseHandler" target="com.bbva.ticker.client.ResponseHandler">
-              <point x="0.0" y="-26.0" />
+              <point x="0.0" y="-15.0" />
               <point x="0.0" y="15.0" />
             </edge>
             <edge source="com.bbva.ticker.client.BBVAPriceTicker" target="com.bbva.ticker.client.Client">
               <point x="0.0" y="-15.0" />
-              <point x="-144.0" y="338.0" />
-              <point x="-147.25" y="354.0" />
+              <point x="219.0" y="445.0" />
+              <point x="160.5" y="445.0" />
               <point x="16.25" y="15.0" />
             </edge>
             <edge source="com.bbva.ticker.client.UnsubscribePriceDataRequestHandler" target="com.bbva.ticker.client.RequestHandler">
-              <point x="0.0" y="-26.0" />
-              <point x="567.5" y="177.0" />
-              <point x="250.33333333333337" y="177.0" />
+              <point x="0.0" y="-15.0" />
+              <point x="581.5" y="290.0" />
+              <point x="381.33333333333337" y="290.0" />
               <point x="39.33333333333337" y="15.0" />
             </edge>
-            <edge source="com.bbva.ticker.client.ResponseListener" target="com.bbva.ticker.client.SocketAdaptor">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.Client">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.PriceDataHistoryResponseHandler">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.BBVAPriceTicker" target="com.bbva.ticker.client.PricingServiceClient">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.RequestPublisher" target="com.bbva.ticker.client.SocketAdaptor">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.UnsubscribePriceDataResponseHandler">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.Session" target="com.bbva.ticker.client.IdentifierFactory">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.UnsubscribePriceDataRequestHandler">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.PricingServiceClient" target="com.bbva.ticker.client.UUIDIdentifierFactory">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.RequestPublisher">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
             <edge source="com.bbva.ticker.client.PriceDataHistoryRequestHandler" target="com.bbva.ticker.client.RequestHandler">
-              <point x="0.0" y="-26.0" />
+              <point x="0.0" y="-15.0" />
               <point x="0.0" y="15.0" />
             </edge>
-            <edge source="com.bbva.ticker.client.Session" target="com.bbva.ticker.client.ResponseHandler">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.ClientSocketFactory" target="com.bbva.ticker.client.ClientException">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.SimpleSocketAdaptor">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.client.PricingServiceProxy" target="com.bbva.ticker.client.SubscribePriceDataResponseHandler">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.9027355623100304" x="-213.27104377104382" y="178.85858585858585" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-48.0" y="231.0" />
           <SelectedNodes>
-            <node>com.bbva.ticker.client.SocketAdaptor</node>
+            <node>com.bbva.ticker.client.RequestHandler</node>
           </SelectedNodes>
-          <Categories>
-            <Category>Constructors</Category>
-          </Categories>
+          <Categories />
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
         </state>
@@ -2607,119 +1945,21 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/UML/Service.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/UML/Model.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="uml://JAVA/com.bbva.ticker.model">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.bbva.ticker.model</OriginalElement>
-          <nodes>
-            <node x="-195.0" y="328.0">com.bbva.ticker.model.PriceData</node>
-            <node x="-86.0" y="175.0">com.bbva.ticker.model.PriceDataSourceType</node>
-            <node x="-478.0" y="74.0">com.bbva.ticker.model.InstrumentOrBuilder</node>
-            <node x="55.0" y="86.0">com.bbva.ticker.model.CallbackWrapper</node>
-            <node x="71.0" y="0.0">com.bbva.ticker.model.DataRequestOrBuilder</node>
-            <node x="-348.0" y="379.0">com.bbva.ticker.model.PriceDataOrBuilder</node>
-            <node x="169.0" y="203.0">com.bbva.ticker.model.TickDataProtos</node>
-            <node x="44.0" y="343.0">com.bbva.ticker.model.ResponseOrBuilder</node>
-            <node x="-307.0" y="21.0">com.bbva.ticker.model.Instrument</node>
-            <node x="-188.0" y="-120.0">com.bbva.ticker.model.PricingType</node>
-            <node x="-66.0" y="-177.0">com.bbva.ticker.model.Request</node>
-            <node x="-74.0" y="403.0">com.bbva.ticker.model.Response</node>
-            <node x="64.0" y="-244.0">com.bbva.ticker.model.DataHistoryRequestOrBuilder</node>
-            <node x="43.0" y="-167.0">com.bbva.ticker.model.RequestOrBuilder</node>
-            <node x="-329.0" y="-240.0">com.bbva.ticker.model.DataHistoryRequest</node>
-            <node x="-86.0" y="-3.0">com.bbva.ticker.model.DataRequest</node>
-            <node x="54.0" y="238.0">com.bbva.ticker.model.Callback</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="com.bbva.ticker.model.Response" target="com.bbva.ticker.model.ResponseOrBuilder">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="com.bbva.ticker.model.Response" target="com.bbva.ticker.model.PriceData">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.model.Request" target="com.bbva.ticker.model.DataHistoryRequest">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.model.PriceData" target="com.bbva.ticker.model.PriceDataOrBuilder">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="com.bbva.ticker.model.DataHistoryRequest" target="com.bbva.ticker.model.PriceDataSourceType">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.model.Callback" target="com.bbva.ticker.model.PriceData">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.model.DataHistoryRequest" target="com.bbva.ticker.model.DataHistoryRequestOrBuilder">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="com.bbva.ticker.model.DataRequest" target="com.bbva.ticker.model.DataRequestOrBuilder">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="com.bbva.ticker.model.DataRequest" target="com.bbva.ticker.model.Instrument">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.model.DataHistoryRequest" target="com.bbva.ticker.model.Instrument">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.model.Request" target="com.bbva.ticker.model.DataRequest">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.model.DataHistoryRequest" target="com.bbva.ticker.model.PricingType">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.model.PriceData" target="com.bbva.ticker.model.PriceDataSourceType">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.model.PriceData" target="com.bbva.ticker.model.Instrument">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.model.DataRequest" target="com.bbva.ticker.model.PriceDataSourceType">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.model.Instrument" target="com.bbva.ticker.model.InstrumentOrBuilder">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="com.bbva.ticker.model.CallbackWrapper" target="com.bbva.ticker.model.Callback">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.model.DataRequest" target="com.bbva.ticker.model.PricingType">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.bbva.ticker.model.Request" target="com.bbva.ticker.model.RequestOrBuilder">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="230.0" y="-35.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4081921">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
