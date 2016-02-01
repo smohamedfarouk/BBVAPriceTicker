@@ -1,0 +1,4 @@
+com.bbva.ticker.DataSource
+com.bbva.ticker.client
+com.bbva.ticker.model
+com.bbva.ticker.service

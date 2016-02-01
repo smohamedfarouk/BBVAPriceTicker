@@ -7,6 +7,7 @@ package com.bbva.ticker.client;
 import com.bbva.ticker.model.*;
 
 import javax.swing.*;
+import javax.swing.border.TitledBorder;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 import java.awt.*;
@@ -107,7 +108,7 @@ public class BBVAPriceTicker implements Client {
     }
 
 
-    Color[] colours = {Color.RED, Color.GREEN, Color.BLACK};
+    Color[] colours = {Color.RED, Color.GREEN.darker(), Color.BLACK};
     final static int STATE_RED = 0;
     final static int STATE_GREEN = 1;
     final static int STATE_BLACK = 2;
@@ -148,7 +149,7 @@ public class BBVAPriceTicker implements Client {
                             ((JLabel) components.get(bidLabelName)).updateUI();
                             ((JLabel) components.get(offerLabelName)).updateUI();
 
-                            ((JTextArea) components.get("status")).setText("Subscription started for PriceData for Instrument:" + instrument + " and Source:" + source);
+                            ((JTextArea) components.get("status")).setText("Receiving data for PriceData for Instrument:" + instrument + " and Source:" + source);
                         }
 
                         @Override
@@ -270,6 +271,7 @@ public class BBVAPriceTicker implements Client {
         container.add(panel);
         FlowLayout sourceFlowLayout = new FlowLayout(FlowLayout.CENTER, 20, 20);
         JPanel sourcePanel = new JPanel();
+        sourcePanel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         sourcePanel.setLayout(sourceFlowLayout);
         sourcePanel.setBackground(Color.WHITE);
         JLabel sourceLabel = new JLabel(source);
@@ -293,15 +295,17 @@ public class BBVAPriceTicker implements Client {
         FlowLayout layout1 = new FlowLayout(FlowLayout.LEFT, 20, 20);
         for (String currency : currencies) {
             JPanel currencyPanel = new JPanel();
+            currencyPanel.setBorder(new TitledBorder(BorderFactory.createRaisedBevelBorder(), currency));
             currencyPanel.setBackground(Color.LIGHT_GRAY);
             currencyPanel.setLayout(layout1);
             currencyPanel.setAlignmentY(Component.CENTER_ALIGNMENT);
-            currencyPanel.add(new JLabel(currency));
+            //currencyPanel.add(new JLabel(currency));
             currencyPanel.add(individualSource.getSubscribeButton(currency, source));
             currencyPanel.add(individualSource.getBidLabel(currency, source));
             currencyPanel.add(individualSource.getOfferLabel(currency, source));
             currencyPanel.add(individualSource.getUnsubscribeButton(currency, source));
             layout1.addLayoutComponent(currency, currencyPanel);
+
             panel.add(currencyPanel);
         }
         return panel;
@@ -320,7 +324,7 @@ public class BBVAPriceTicker implements Client {
                 final String source = instrument1[3];
                 final DataHistoryRequest.Builder dataRequestBuilder = client.createHistoryValues(1, instrument, PriceDataSourceType.valueOf(source), 50);
 
-                ((JTextArea) components.get("status")).setText("Successfully Request PriceData History for  Instrument:" + instrument + " and Source:" + source);
+                ((JTextArea) components.get("status")).setText("Successfully Requested PriceData History for  Instrument:" + instrument + " and Source:" + source);
                 final PriceDataTableModel model = new PriceDataTableModel(history);
                 if (m_dialog == null) {
                     m_dialog = new JDialog();
