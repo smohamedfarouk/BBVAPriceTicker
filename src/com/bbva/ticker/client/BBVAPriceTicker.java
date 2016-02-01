@@ -18,9 +18,25 @@ import java.util.List;
 public class BBVAPriceTicker implements Client {
     private Map<String, Component> components = new HashMap<>();
     private Map<String, String> currencySubscriptions = new HashMap<>();
-
-    final PricingServiceClient client = new PricingServiceClient(this);
+    private final PricingServiceClient client = new PricingServiceClient(this);
     private Throwable m_throwable;
+    final java.util.Map<String, Integer> currencies = new LinkedHashMap<>();
+
+    public BBVAPriceTicker() {
+
+        currencies.put("AUDUSD", 1);
+        currencies.put("AUDJPY", 2);
+        currencies.put("AUDNZD", 3);
+        currencies.put("CADJPY", 4);
+        currencies.put("EURCHF", 5);
+        currencies.put("EURGBP", 6);
+        currencies.put("EURJPY", 7);
+        currencies.put("EURUSD", 8);
+        currencies.put("GBPJPY", 9);
+        currencies.put("GBPUSD", 10);
+
+    }
+
 
     private JButton setHistoryRequested(String currency, String source) {
         JButton m_history_required = new JButton();
@@ -125,10 +141,11 @@ public class BBVAPriceTicker implements Client {
             final String[] instrument1 = instrumen1.split("_");
             final String instrument = instrument1[2];
             final String source = instrument1[3];
-            final DataRequest.Builder dataRequestBuilder = client.createDataRequestForSubscription(1, instrument, PriceDataSourceType.valueOf(source));
+            int id =currencies.get(instrument);
+            final DataRequest.Builder dataRequestBuilder = client.createDataRequestForSubscription(id, instrument, PriceDataSourceType.valueOf(source));
             ((JTextArea) components.get("status")).setText("Subscribing PriceData for Instrument:" + instrument + " and Source:" + source);
-            final String bidLabelName ="bid_label_" + instrument + "_" + source;
-            final String offerLabelName ="offer_label_" + instrument + "_" + source;
+            final String bidLabelName = "bid_label_" + instrument + "_" + source;
+            final String offerLabelName = "offer_label_" + instrument + "_" + source;
 
             SwingUtilities.invokeLater(new Runnable() {
                 @Override
@@ -183,10 +200,10 @@ public class BBVAPriceTicker implements Client {
             final String[] instrument1 = instrumen1.split("_");
             final String instrument = instrument1[2];
             final String source = instrument1[3];
-            final String bidLabelName ="bid_label_" + instrument + "_" + source;
-            final String offerLabelName ="offer_label_" + instrument + "_" + source;
-
-            final DataRequest.Builder dataRequestBuilder = client.createDataRequestForSubscription(1, instrument, PriceDataSourceType.valueOf(source));
+            final String bidLabelName = "bid_label_" + instrument + "_" + source;
+            final String offerLabelName = "offer_label_" + instrument + "_" + source;
+            int id =currencies.get(instrument);
+            final DataRequest.Builder dataRequestBuilder = client.createDataRequestForSubscription(id, instrument, PriceDataSourceType.valueOf(source));
             ((JTextArea) components.get("status")).setText("Requesting unsubscription for PriceData for Instrument:" + instrument + " and Source:" + source);
             SwingUtilities.invokeLater(new Runnable() {
                 @Override
@@ -237,8 +254,8 @@ public class BBVAPriceTicker implements Client {
 
             if (e.getClickCount() == 2 && label.isEnabled()) {
                 setHistoryRequested(instrument, source);
-
-                final DataHistoryRequest.Builder dataRequestBuilder = client.createHistoryValues(1, instrument, PriceDataSourceType.valueOf(source), 50);
+                int id =currencies.get(instrument);
+                final DataHistoryRequest.Builder dataRequestBuilder = client.createHistoryValues(id, instrument, PriceDataSourceType.valueOf(source), 50);
                 ((JTextArea) components.get("status")).setText("Requesting PriceData History for  Instrument:" + instrument + " and Source:" + source);
                 SwingUtilities.invokeLater(new Runnable() {
                     @Override
@@ -251,6 +268,7 @@ public class BBVAPriceTicker implements Client {
                                     popUpPriceDataHistory((JLabel) components.get("bid_label_" + instrument + "_" + source), success, 50);
                                 }
                             }
+
                             @Override
                             public void failure(String failure) {
                                 ((JTextArea) components.get("status")).setText(failure);
@@ -280,20 +298,11 @@ public class BBVAPriceTicker implements Client {
 
 
         panel.add(sourcePanel);
-        java.util.List<String> currencies = new ArrayList<>();
-        currencies.add("AUDUSD");
-        currencies.add("AUDJPY");
-        currencies.add("AUDNZD");
-        currencies.add("CADJPY");
-        currencies.add("EURCHF");
-        currencies.add("EURGBP");
-        currencies.add("EURJPY");
-        currencies.add("EURUSD");
-        currencies.add("GBPJPY");
-        currencies.add("GBPUSD");
+
 
         FlowLayout layout1 = new FlowLayout(FlowLayout.LEFT, 20, 20);
-        for (String currency : currencies) {
+        for (Map.Entry<String, Integer> entry : currencies.entrySet()) {
+            String currency = entry.getKey();
             JPanel currencyPanel = new JPanel();
             currencyPanel.setBorder(new TitledBorder(BorderFactory.createRaisedBevelBorder(), currency));
             currencyPanel.setBackground(Color.LIGHT_GRAY);
@@ -322,7 +331,7 @@ public class BBVAPriceTicker implements Client {
                 final String[] instrument1 = instrumen1.split("_");
                 final String instrument = instrument1[2];
                 final String source = instrument1[3];
-                final DataHistoryRequest.Builder dataRequestBuilder = client.createHistoryValues(1, instrument, PriceDataSourceType.valueOf(source), 50);
+                final DataHistoryRequest.Builder dataRequestBuilder = client.createHistoryValues(currencies.get(instrument), instrument, PriceDataSourceType.valueOf(source), 50);
 
                 ((JTextArea) components.get("status")).setText("Successfully Requested PriceData History for  Instrument:" + instrument + " and Source:" + source);
                 final PriceDataTableModel model = new PriceDataTableModel(history);

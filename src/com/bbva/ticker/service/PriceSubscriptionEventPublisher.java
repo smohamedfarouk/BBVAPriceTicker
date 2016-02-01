@@ -29,12 +29,12 @@ public class PriceSubscriptionEventPublisher extends
                                 Request request = entry.getValue();
                                 String identifier = entry.getKey();
                                 ClientConnection clientConnection = m_clientConnections.get(identifier);
-                                publish(new PriceSubscriptionEvent(request, clientConnection));
                                 try {
                                     Thread.sleep(500);
                                 } catch (InterruptedException e) {
                                     e.printStackTrace();
                                 }
+                                publish(new PriceSubscriptionEvent(request, clientConnection));
 
                             } catch (Exception e) {
                                 m_requests.remove(entry.getValue().getIdentifier());

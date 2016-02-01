@@ -134,7 +134,7 @@ public class PricingServiceClient implements Client {
 
 
     public void subcribeInstrument(String identifier, DataRequest.Builder dataRequestBuilder, Callback<PriceData, String> subScribeCallback) {
-        proxy.subscribePriceData(identifier, createDataRequestForSubscription(1, dataRequestBuilder.getInstrument().getName(), dataRequestBuilder.getPriceDataSourceType()).build(), subScribeCallback);
+        proxy.subscribePriceData(identifier, createDataRequestForSubscription(dataRequestBuilder.getInstrument().getInstrumentId(), dataRequestBuilder.getInstrument().getName(), dataRequestBuilder.getPriceDataSourceType()).build(), subScribeCallback);
     }
 
     public void unsubcribeInstrument(String identifier, DataRequest.Builder dataRequestBuilder, Callback<String, String> unsubScribeCallback) {
